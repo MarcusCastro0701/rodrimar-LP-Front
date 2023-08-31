@@ -5,6 +5,7 @@ import Inicio from "../../components/Inicio";
 import Equipe from "../../components/Equipe";
 import Servicos from "../../components/Servicos";
 import Footer from "../../components/Footer";
+import Valores from "../../components/Valores";
 
 
 export default function Timeline() {
@@ -12,6 +13,7 @@ export default function Timeline() {
   return (
     <MainContainer>
       <Inicio/>
+      <Valores/>
       <Footer/>
     </MainContainer>
   );
