@@ -4,8 +4,7 @@ import SobreNos from "../../components/SobreNos";
 import Inicio from "../../components/Inicio";
 import Equipe from "../../components/Equipe";
 import Servicos from "../../components/Servicos";
-import Footer from "../../components/Footer";
-import Valores from "../../components/Valores";
+import PartnersCarousel from "../../components/partners/PartnersCarousel";
 
 
 export default function Timeline() {
@@ -13,8 +12,7 @@ export default function Timeline() {
   return (
     <MainContainer>
       <Inicio/>
-      <Valores/>
-      <Footer/>
+      <PartnersCarousel/>
     </MainContainer>
   );
 }
