@@ -6,13 +6,9 @@ import {AiOutlineEye} from "react-icons/ai"
 import {BiDonateHeart} from "react-icons/bi"
 import scroll from "../hooks/Scroll";
 import caminhao2 from "../assets/images/caminhao2.jpg";
-import caminhao from "../assets/images/caminhao.jpg";
-import rodrimarNoBG2 from "../assets/images/rodrimarNoBG2.png";
 
 
 export default function Valores(){
-
-    
 
     return(
         <Container>
