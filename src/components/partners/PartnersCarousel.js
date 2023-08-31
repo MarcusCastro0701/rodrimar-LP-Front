@@ -61,6 +61,18 @@ const Container = styled.div`
         width: 100%;
         margin: 0 10vw;
     }
+    @media (max-width: 850px) {
+        padding: 1.2vh 0;
+        padding-bottom: 4vh;
+        width: 100%;
+        row-gap: 4vh;
+        h1 {
+            font-size: 19px;
+            padding: .5vh 0;
+            padding-left: 2vw;
+            margin: 5vw;
+        }
+    }  
 `
 const CarouselContainer = styled.div`
     width: 100%;
@@ -73,5 +85,9 @@ const CarouselContainer = styled.div`
     overflow-y: hidden;
     :hover {
         animation-play-state: paused;
+    }
+    @media (max-width: 850px) {
+        height: 90px;
+        column-gap: 6vw;
     }
 `

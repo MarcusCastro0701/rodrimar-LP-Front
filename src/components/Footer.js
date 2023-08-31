@@ -56,6 +56,9 @@ const Container = styled.footer`
   padding: 2vh 10vw;
   color: #FFFFFF;
   row-gap: 4vh;
+  @media (max-width: 850px) {
+    padding: 2vh 5vw;
+  }
 `
 const TitleContainer = styled.div`
   width: 100%;
@@ -71,12 +74,23 @@ const TitleContainer = styled.div`
     font-size: 25px;
     cursor: pointer;
   }
+  @media (max-width: 850px) {
+    > h3 {
+      font-size: 18px;
+    }
+    svg {
+      font-size: 21px;
+    }
+  }
 `
 const SocialContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 1.6vw;
+  @media (max-width: 850px) {
+    column-gap: 4vw;
+  }
 `
 const SubContainer = styled.div`
   width: 100%;
@@ -84,11 +98,18 @@ const SubContainer = styled.div`
   align-items: center;
   justify-content: center;
   column-gap: 5vw;
+  @media (max-width: 850px) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `
 const ImageContainer = styled.div`
   img {
     max-height: 100%;
     cursor: pointer;
+  }
+  @media (max-width: 850px) {
+    display: none;
   }
 `
 const TextColumn = styled.div`
@@ -106,6 +127,17 @@ const TextColumn = styled.div`
     max-width: 300px;
     cursor: pointer;
   }
+  @media (max-width: 850px) {
+    width: auto;
+    max-width: 58%;
+    h5 {
+      width: 90%;
+      font-size: 11px;
+    }
+    h4 {
+      font-size: 17px;
+    }
+  }
 `
 const AboutContainer = styled.div`
   width: 100%;
@@ -116,5 +148,8 @@ const AboutContainer = styled.div`
   padding: 1.2vh 0;
   > :last-child {
     text-decoration: underline;
+  }
+  @media (max-width: 850px) {
+    font-size: 12px;
   }
 `
