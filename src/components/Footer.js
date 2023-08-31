@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LogoNoBG from "../assets/images/LogoNoBG.png"
+import rodrimarNoBG from "../assets/images/rodrimarNoBG.png"
 import {BsInstagram} from 'react-icons/bs'
 import {FaTiktok} from 'react-icons/fa'
 import {BsWhatsapp} from 'react-icons/bs'
@@ -9,21 +9,21 @@ export default function Footer(){
 return (
     <Rodape>
         <SubContainerLeft>
-            <img src={LogoNoBG}/>
+            <img src={rodrimarNoBG}/>
         </SubContainerLeft>
         <SubContainerRight>
-            <p>2023 © ALPHAWEB. Todos os direitos reservados.</p>
+            <p>2023 © Transporte Rodrimar. Todos os direitos reservados.</p>
             <Border/>
-            <p>Desenvolvendo e aplicando com o melhor método.</p>
+            <p>Mais de 50 anos de Solidez e Comprometimento.</p>
             <Border/>
             <Socials>
-                <a href={"https://www.instagram.com/alphaaweb_/"} target="_blank" rel="noopener noreferrer"> 
+                <a target="_blank" rel="noopener noreferrer"> 
                     <Instagram/>
                 </a>
-                <a href={"https://www.tiktok.com/@alphaaweb_"} target="_blank" rel="noopener noreferrer"> 
+                <a  target="_blank" rel="noopener noreferrer"> 
                     <Tiktok/>
                 </a>
-                <a href={"https://api.whatsapp.com/send?phone=5535910185219"} target="_blank" rel="noopener noreferrer"> 
+                <a  target="_blank" rel="noopener noreferrer"> 
                     <WhatsApp/>
                 </a>
             </Socials>
