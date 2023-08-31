@@ -29,4 +29,10 @@ const Container = styled.div`
         max-height: 190px;
         cursor: pointer;
     }
+    @media (max-width: 850px) {
+        img {
+            max-width: 150px;
+            max-height: 90px;
+        }
+    }
 `
