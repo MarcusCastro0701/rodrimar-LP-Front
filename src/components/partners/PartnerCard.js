@@ -17,6 +17,7 @@ const sliding = keyframes`
     }
 `;
 const Container = styled.div`
+    border: 1px solid red;
     width: auto;
     height: auto;
     display: flex;
@@ -25,6 +26,7 @@ const Container = styled.div`
     animation: ${sliding} 16s linear infinite;
     animation-play-state: ${props => props.teste ? ("initial"):("paused")};
     img {
+        border: 1px solid green;
         max-width: 380px;
         max-height: 190px;
         cursor: pointer;
