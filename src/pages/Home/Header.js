@@ -2,7 +2,8 @@ import styled from "styled-components";
 import React, { useState, useRef } from 'react';
 import 'primeicons/primeicons.css';
 import scroll from "../../hooks/Scroll";
-import LogoNoBG from "../../assets/images/LogoNoBG.png"
+import rodrimarNoBG from "../../assets/images/rodrimarNoBG.png";
+
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -25,15 +26,13 @@ export default function Header() {
       <HeaderItems>
         <Logo>
         <img
-    src={LogoNoBG}
+    src={rodrimarNoBG}
     alt="Logo"
-    style={{ width: '4rem' }}
   />
         <h1
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      ALPHA WEB
     </h1>
         </Logo>
         <div
@@ -67,10 +66,10 @@ export default function Header() {
 
 
 const Container = styled.div`
-	background: #1F009C;
+	background: #0F014D;
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: 150vh;
 box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 display:flex;
 justify-content:center;
@@ -134,6 +133,10 @@ justify-content:space-around;
 align-items:center;
 h1{
   font-size:30px;
+}
+img{
+  width: 120px;
+  height: 100px;
 }
 @media (max-width: 1200px) {
   display:flex;

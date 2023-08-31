@@ -1,25 +1,47 @@
 import styled from "styled-components";
-import React, { useState } from 'react';
-import {BsArrowDownShort} from "react-icons/bs"
+import React, { useState, useEffect } from 'react';
+import {BsArrowDownShort} from "react-icons/bs";
+import {TbTargetArrow} from "react-icons/tb";
+import {AiOutlineEye} from "react-icons/ai"
 import scroll from "../hooks/Scroll";
+import caminhao2 from "../assets/images/caminhao2.jpg";
+import caminhao from "../assets/images/caminhao.jpg";
+import rodrimarNoBG2 from "../assets/images/rodrimarNoBG2.png";
 
 
 export default function Inicio(){
 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const imageUrls = [
+        caminhao2,
+        caminhao2
+      ];
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+        }, 6000);
+      
+        return () => clearTimeout(timer);
+      }, [currentImageIndex]);
+
+      const backgroundImageStyle = {
+        backgroundImage: `url(${imageUrls[currentImageIndex]})`,
+      };
+
     return(
-        <Container>
+        <Container style={backgroundImageStyle}>
             <SubContainer>
-                <h1>
-                    Desenvolvendo e aplicando 
-                </h1>
-                <p>
-                    com o melhor método.
-                </p>
+                <img src={rodrimarNoBG2}/>
                 <h2>
-                    Transforme sua presença online conosco: desenvolvimento web e marketing digital que impulsionam o seu negócio.
+                    Transporte de cargas feito com <b>dedicação</b>, <b>pontualidade</b> e <b>segurança</b>.
+                </h2>
+                <h2>
+                    Aqui na <b>Rodrimar</b>, a sua <b>entrega</b> é a nossa <b>prioridade</b>.
                 </h2>
                 <div onClick={() => scroll(710)}>
-                    CONHEÇA A ALPHAWEB
+                    CONHEÇA A RODRIMAR
                 </div>
                 <Icone onClick={() => scroll(710)}/>
             </SubContainer>
@@ -30,18 +52,17 @@ export default function Inicio(){
 }
 
 const Container = styled.div `
+    background-image: url(${caminhao2});
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    height: 700px;
-    margin-top: 60px;
-    border-radius: 15px;
-    p{
-        font-size: 20px;
-        color: #1F22DA;
-    }
+    height: 930px;
+    transition: background-image 2s ease-in-out;
     @media (max-width: 1200px) {
     margin-top: -90px;
 }
@@ -52,19 +73,22 @@ const SubContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 22px 100px 22px 100px;
+    border-radius: 15px;
     p{
-        font-size: 40px;
-        color: #1F22DA;
+        font-size: 15px;
+        color: black;
         margin-top: 8px;
         font-weight: 700;
+        margin-bottom: 40px;
         @media (max-width: 1200px) {
             font-size: 30px;
 }
     }
     h1{
-        margin-top: 0px;
         font-size: 40px;
-        color: #1F22DA;
+        color: #0F014D;
         font-weight: 700;
         @media (max-width: 1200px) {
             font-size: 30px;
@@ -72,11 +96,12 @@ const SubContainer = styled.div`
 }
     }
     h2{
-        margin: 60px 0 60px 0;
-        font-size: 23px;
-        color: #1F22DA;
-        width: 600px;
+        margin: 0px 0 15px 0;
+        font-size: 18px;
+        color: black;
+        width: 700px;
         text-align: center;
+        line-height: 20px;
         @media (max-width: 1200px) {
             font-size: 20px;
             width: 100%;
@@ -85,20 +110,27 @@ const SubContainer = styled.div`
     div{
         width: 300px;
         height: 50px;
-        color: #1F22DA;
-        background-color: #1F22DA;
+        color: white;
+        background-color: #0F014D;
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        margin-top: 15px;
     }
+    b{
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+    color: #0F014D;
+}
 `
 
 const Icone = styled(BsArrowDownShort)`
     height: 50px;
     width: 50px;
-    color: #1F22DA;
+    color: #0F014D;
     margin-top: 15px;
     cursor: pointer;
 `
