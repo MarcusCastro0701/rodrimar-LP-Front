@@ -70,6 +70,7 @@ const CarouselContainer = styled.div`
     justify-content: left;
     column-gap: 3vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     :hover {
         animation-play-state: paused;
     }
