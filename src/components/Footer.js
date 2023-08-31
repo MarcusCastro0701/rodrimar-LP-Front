@@ -1,138 +1,120 @@
 import styled from "styled-components";
 import rodrimarNoBG from "../assets/images/rodrimarNoBG.png"
-import {BsInstagram} from 'react-icons/bs'
+import {BsInstagram, BsWhatsapp} from 'react-icons/bs'
 import {FaTiktok} from 'react-icons/fa'
-import {BsWhatsapp} from 'react-icons/bs'
 
 export default function Footer(){
 
-return (
-    <Rodape>
-        <SubContainerLeft>
-            <img src={rodrimarNoBG}/>
-        </SubContainerLeft>
-        <SubContainerRight>
-            <p>2023 © Transporte Rodrimar. Todos os direitos reservados.</p>
-            <Border/>
-            <p>Mais de 50 anos de Solidez e Comprometimento.</p>
-            <Border/>
-            <Socials>
-                <a target="_blank" rel="noopener noreferrer"> 
-                    <Instagram/>
-                </a>
-                <a  target="_blank" rel="noopener noreferrer"> 
-                    <Tiktok/>
-                </a>
-                <a  target="_blank" rel="noopener noreferrer"> 
-                    <WhatsApp/>
-                </a>
-            </Socials>
-        </SubContainerRight>
-    </Rodape>
-)
+  return (
+    <Container>
 
+      <TitleContainer>
+        <h3>{"Conecte-se Conosco"}</h3>
+        <SocialContainer>
+          <BsInstagram/>
+          <FaTiktok/>
+          <BsWhatsapp/>
+        </SocialContainer>
+      </TitleContainer>
+
+      <SubContainer>
+        <ImageContainer>
+          <img src={rodrimarNoBG} alt="" />
+        </ImageContainer>
+
+        <TextColumn>
+          <h4>{"Nosso Site"}</h4>
+          <h5>{"Página Inicial"}</h5>
+          <h5>{"Nossos Serviços"}</h5>
+          <h5>{"Fale Conosco"}</h5>
+        </TextColumn>
+
+        <TextColumn>
+          <h4>{"Contato"}</h4>
+          <h5>{"contato@transportadorarodrimar.com.br"}</h5>
+          <h5>{"R. Rosa Kasinski, 1195 - Santa Teresinha, Lavras - MG, 37200-000"}</h5>
+          <h5>{"(35) 3821-6088"}</h5>
+        </TextColumn>
+
+      </SubContainer>
+
+      <AboutContainer>
+        <span>{"Todos Direitos Reservados ©"}</span>
+        <span>{"Desenvolvido por AlphaWeb"}</span>
+      </AboutContainer>
+
+    </Container>
+  )
 }
 
-const Rodape = styled.footer`
-background-color: #032453;
-width: 100%;
-height: 300px;
-margin-top: 25px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-img{
-    width: 150px;
-}
-@media (max-width: 1200px) {
-    height: 250px;
+const Container = styled.footer`
+  background-color: #0f014dff;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vh 10vw;
+  color: #FFFFFF;
+  row-gap: 4vh;
+`
+const TitleContainer = styled.div`
+  width: 100%;
+  padding: 1.7vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #FFFFFF;
+  > h3 {
+    font-size: 21px;
+  }
+  svg {
+    font-size: 25px;
+    cursor: pointer;
   }
 `
-
-const SubContainerLeft = styled.div`
-width: 15%;
-height: 75%;
-border-right: 1px solid grey;
-display: flex;
-align-items: center;
-justify-content: flex-end;
-padding-right: 30px;
-p{
-    color: white;
-    font-size: 15px;
-    font-weight: 100;
-}
-@media (max-width: 1200px) {
-    padding-right: 15px;
-    width: 35%;
+const SocialContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.6vw;
+`
+const SubContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5vw;
+`
+const ImageContainer = styled.div`
+  img {
+    max-height: 100%;
+    cursor: pointer;
   }
 `
-
-const SubContainerRight = styled.div`
-width: 22%;
-height: 75%;
-padding-left: 25px;
-border-left: 1px solid grey;
-display: flex;
-flex-direction: column;
-justify-content: center;
-p{
-    color: white;
-    font-size: 15px;
-    font-weight: 100;
-    @media (max-width: 1200px) {
-    font-size: 10px;
+const TextColumn = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 2vh;
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
   }
-}
-@media (max-width: 1200px) {
-    width: 35%;;
+  h5 {
+    font-size: 14px;
+    max-width: 300px;
+    cursor: pointer;
   }
 `
-const Socials = styled.div`
-height: 40px;
-width: 95%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-`
-const Instagram = styled(BsInstagram)`
-cursor: pointer;
-width: 30px;
-height: 30px;
-color: white;
-@media (max-width: 1200px) {
-    width: 23px;
-    height: 23px;
+const AboutContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1vw;
+  padding: 1.2vh 0;
+  > :last-child {
+    text-decoration: underline;
   }
 `
-const Tiktok = styled(FaTiktok)`
-cursor: pointer;
-width: 30px;
-height: 30px;
-color: white;
-@media (max-width: 1200px) {
-    width: 23px;
-    height: 23px;
-  }
-`
-const WhatsApp = styled(BsWhatsapp)`
-cursor: pointer;
-width: 30px;
-height: 30px;
-color: white;
-@media (max-width: 1200px) {
-    width: 23px;
-    height: 23px;
-  }
-`
-
-const Border = styled.div`
-width: 97%;
-height: 1px;
-background-color: grey;
-margin: 7px 0 10px 0;
-`
-
-
