@@ -13,26 +13,26 @@ const sliding = keyframes`
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc( 6 * (-100% - 3vw)));
+        transform: translateX(calc((-100% - 3vw) * (16)));
     }
 `;
 const Container = styled.div`
-    width: auto;
-    height: auto;
+    width: 280px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: ${sliding} 16s linear infinite;
+    animation: ${sliding} 20s linear infinite;
     animation-play-state: ${props => props.teste ? ("initial"):("paused")};
     img {
-        max-width: 380px;
+        max-width: 280px;
         max-height: 190px;
         cursor: pointer;
     }
     @media (max-width: 850px) {
         img {
             max-width: 150px;
-            max-height: 90px;
+            max-height: 190px;
         }
     }
 `
