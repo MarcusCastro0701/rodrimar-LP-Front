@@ -1,43 +1,21 @@
 import styled from "styled-components";
 import PartnerCard from "./PartnerCard";
 import { useState } from "react";
+import PARTNER_LIST from "./partnerList"
 
 export default function PartnersCarousel(){
 
     const [ animationState, setAnimationState ] = useState(true)
-    const PartnersList = [
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-2.png.webp"
-        },
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-22.png.webp"
-        },
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-23.png.webp"
-        },
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-236.png.webp"
-        },
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-2368.png.webp"
-        },
-        {
-            imageUrl: "https://defexpress.com.br/wp-content/webp-express/webp-images/uploads/2023/06/Sem-Titulo-2368567567.png.webp"
-        },
-    ]
 
     function FormatPartnersList(list){
-        if(list.length <= 5){
-            return [...list, ...list]
-        }
-        return [...list, list[0], list[1], list[2], list[3], list[4]]
+        return [...list, ...list]
     }
-
+    const result = FormatPartnersList(PARTNER_LIST)
     return (
         <Container>
             <h1>{"CONHEÇA NOSSOS PARCEIROS"}</h1>
             <CarouselContainer onMouseEnter={() => setAnimationState(false)} onMouseLeave={() => setAnimationState(true)}>
-                {FormatPartnersList(PartnersList)?.map( (e, i) => 
+                {result?.map( (e, i) => 
                     <PartnerCard key={i} partnerData={e} animationState={animationState} />
                 )}
             </CarouselContainer>
@@ -61,6 +39,18 @@ const Container = styled.div`
         width: 100%;
         margin: 0 10vw;
     }
+    @media (max-width: 850px) {
+        padding: 1.2vh 0;
+        padding-bottom: 4vh;
+        width: 100%;
+        row-gap: 4vh;
+        h1 {
+            font-size: 19px;
+            padding: .5vh 0;
+            padding-left: 2vw;
+            margin: 5vw;
+        }
+    }  
 `
 const CarouselContainer = styled.div`
     width: 100%;
@@ -70,7 +60,12 @@ const CarouselContainer = styled.div`
     justify-content: left;
     column-gap: 3vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     :hover {
         animation-play-state: paused;
+    }
+    @media (max-width: 850px) {
+        height: 90px;
+        column-gap: 6vw;
     }
 `

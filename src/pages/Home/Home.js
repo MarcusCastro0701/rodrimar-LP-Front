@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Header from "./Header";
 import { AutoComplete } from 'primereact/autocomplete';
 import Timeline from "./Timeline";
-import SobreNos from "../../components/SobreNos";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   const whatsappNumber = "+5535910185219";
@@ -15,6 +15,7 @@ export default function Home() {
     <Container>
       <Header />
       <Timeline />
+      <Footer/>
       <WhatsAppButton
         href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
         target="_blank"
