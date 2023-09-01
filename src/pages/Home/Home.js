@@ -45,7 +45,7 @@ const WhatsAppButton = styled.a`
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out; 
-
+  z-index: 100000000;
 
   &:hover {
     box-shadow: 0 3px 6px rgba(0, 128, 0, 0.3);
