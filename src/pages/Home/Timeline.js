@@ -13,6 +13,7 @@ export default function Timeline() {
   return (
     <MainContainer>
       <Inicio/>
+      <SobreNos/>
       <Valores/>
       <PartnersCarousel/>
     </MainContainer>

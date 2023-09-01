@@ -2,10 +2,19 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import scroll from "../hooks/Scroll";
-
+import {BsTruck} from "react-icons/bs"
 export default function SobreNos(){
 
-    const height = Number(window.innerHeight);
+  const BsTruckIcon = styled(BsTruck)`
+  font-size: 200px;
+  margin-left: 18vw;
+  color: white;
+  transition: transform 0.2s; 
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 
      const opts = {
          playerVars: {
@@ -22,51 +31,47 @@ export default function SobreNos(){
     return(
 
         <Container id="1">
-
-            <SubContainerLeft>
-                <p>Serviços validados por</p>
-                <h1>dezenas</h1>
-                <p>de clientes.</p>
-                <h2>
-                    Acreditamos que <b>cada cliente é único</b>, assim como suas <b>necessidades</b> e <b>metas</b>. É por isso que <b>não</b> oferecemos <b>soluções genéricas</b>. 
-                </h2>
-                <h2>
-                    Nossa equipe de gerentes e desenvolvedores trabalha <b>lado a lado com você</b>, para entender o <b>coração do seu negócio</b> e projetar <b>estratégias  e aplicações personalizadas</b> que o leve diretamente ao seu <b>público-alvo</b> e que torne suas <b>mediações</b> mais <b>práticas</b>.
-                </h2>
-                <div onClick={() => scroll(1750)}>
-                    CONHEÇA A NOSSA EQUIPE
-                </div>
-                
-            </SubContainerLeft>
-
-            <SubContainerRight>
-                <SubLine>
-                    <p> O que nós fazemos? </p>
-                </SubLine>
-                <YouTube videoId="x6RgJ_IEtEA" opts={opts}/>
-            </SubContainerRight>
-
+            <Left>
+            <h1>{"Sobre Nós"}</h1>
+            <p>Somos uma empresa de alto padrão e
+        excelência. Atuamos no setor de transportes de calcário, cal, carvão coque e farelo, além de transportes pesados com frota própria e agregados, abrangendo o transporte de minérios em geral (a granel e ensacados).<br></br>
+        No mercado há mais de 50 anos, a Transporte
+    Rodrimar é uma das empresas mais tradicionais em seus segmentos. Com uma frota acima de 60 veículos, nossa empresa oferece qualidade e eficiência, desenvolvendo um trabalho mais seguro aos nossos clientes e colaboradores.
+    </p>
+    <BsTruckIcon/>
+            </Left>
         </Container >
 
     )
 
 }
 
-const SubLine = styled.div`
-   p{
-    font-size: 30px;
-    color: #1F22DA;
-    margin-bottom: 1.5vh;
-}
-`
 
 const Container = styled.div `
 display: flex;
-flex-direction: row;
-width: 1300px;
-height: 600px;
-margin: 60px 0 300px 0;
-border-radius: 15px;
+justify-content:center;
+width: 99.2vw;
+height: 80vh;
+background: linear-gradient(to right,rgba(15, 1, 77, 0.85)50%,rgba(15, 1, 77, 0.85)50%), url("https://img.freepik.com/fotos-gratis/veiculo-de-caminhao-longo-pronto-para-entrega-e-transporte_342744-1294.jpg?w=1380&t=st=1693518357~exp=1693518957~hmac=52dfcf984acf66992463f98a8b5085988eb64367a3b6567f02c5127d43f57ef9") no-repeat center center / cover;
+box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+h1 {
+        padding-left: 1vw;
+        border-left: 8px solid #09DCFF;
+        font-size: 32px;
+        font-weight: 600;
+        width: 100%;
+        margin: 0 3vw;
+        margin-top:10vh;
+        color:white;
+        height:32px;
+    }
+    p {
+    color: white;
+    margin: 10vh 3vw;
+    font-size:30px;
+    line-height: 1.5;
+    width:70vw;
+  }
 @media (max-width: 1200px) {
     flex-direction: column-reverse;
     align-items: center;
@@ -76,64 +81,9 @@ border-radius: 15px;
   }
 `
 
-const SubContainerLeft = styled.div`
-width: 500px;
-height: 100%;
-padding: 45px;
-@media (max-width: 1200px) {
-    width: 100%;
-  }
-p{
-    font-size: 37px;
-    color: #1F22DA;
-}
-h1{
-    font-size: 37px;
-    color: #1F22DA;
-}
-h2{
-    margin-top: 30px;
-    font-size: 15px;
-    color: #1F22DA;
-    line-height: 20px;
-    font-weight: 200;
-}
-b{
-    color: #1F22DA;
-    font-weight: 800;
-}
-div{
-    width: 300px;
-    height: 50px;
-    color: #1F22DA;
-    background-color: #1F22DA;
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-top: 60px;
-    }
+const Left = styled.div`
+width:79vw;
+backdrop-filter: blur(5px);
 `
-const SubContainerRight = styled.div`
-width: 800px;
-padding: 45px;
-@media (max-width: 1200px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-  }
-iframe{
-    border-radius: 35px;
-    border: 5px solid black;
-    height: 400px;
-    width: 700px;
-    @media (max-width: 1200px) {
-    width: 350px;
-    height: 200px;
-  }
-    }
-`
+
+
