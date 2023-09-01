@@ -3,6 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Header from "./Header";
 import { AutoComplete } from 'primereact/autocomplete';
 import Timeline from "./Timeline";
+import SobreNos from "../../components/SobreNos";
 
 export default function Home() {
   const whatsappNumber = "+5535910185219";
