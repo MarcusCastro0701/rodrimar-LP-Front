@@ -22,7 +22,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: ${sliding} 20s linear infinite;
+    animation: ${sliding} 35s linear infinite;
     animation-play-state: ${props => props.teste ? ("initial"):("paused")};
     img {
         max-width: 280px;

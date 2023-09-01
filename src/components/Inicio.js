@@ -5,7 +5,7 @@ import {TbTargetArrow} from "react-icons/tb";
 import {AiOutlineEye} from "react-icons/ai"
 import scroll from "../hooks/Scroll";
 import caminhao2 from "../assets/images/caminhao2.jpg";
-import caminhao from "../assets/images/caminhao.jpg";
+import caminhao3 from "../assets/images/caminhao3.jpg";
 import rodrimarNoBG2 from "../assets/images/rodrimarNoBG2.png";
 
 
@@ -15,7 +15,7 @@ export default function Inicio(){
 
     const imageUrls = [
         caminhao2,
-        caminhao2
+        caminhao3
       ];
 
     useEffect(() => {
@@ -124,6 +124,15 @@ const SubContainer = styled.div`
     font-weight: 800;
     font-size: 18px;
     color: #0F014D;
+}
+img{
+    @media (max-width: 1200px) {
+        width: 350px;
+        height: 130px;
+}
+}
+@media (max-width: 1200px) {
+    width: 100%;
 }
 `
 
