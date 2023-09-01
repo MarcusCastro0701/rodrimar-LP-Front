@@ -5,7 +5,7 @@ import {TbTargetArrow} from "react-icons/tb";
 import {AiOutlineEye} from "react-icons/ai"
 import {BiDonateHeart} from "react-icons/bi"
 import scroll from "../hooks/Scroll";
-import caminhao2 from "../assets/images/caminhao2.jpg";
+import caminhao3 from "../assets/images/caminhao3.jpg";
 
 
 export default function Valores(){
@@ -55,22 +55,39 @@ const Container = styled.div `
     flex-direction: row;
     width: 100%;
     height: 900px;
+    background-color: white;
+    background-image: url(${caminhao3});
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+    &::before {
+        content: '';
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
     @media (max-width: 1200px) {
     margin-top: -90px;
 }
     
 `
 const SubContainer = styled.div`
+    z-index: 10;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0 20px 0 20px;
-    background-color: rgba(120, 120, 120, 0.5);
+    background-color: rgba(210, 210, 210, 0.7);
     border-radius: 10px;
     height: 700px;
     width: 400px;
     padding: 15px 20px 0 20px;
     text-align: center;
+    border: 4px solid rgba(15, 1, 77, 0.7);
     &:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.03);
