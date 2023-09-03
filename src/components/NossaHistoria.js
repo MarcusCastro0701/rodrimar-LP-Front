@@ -1,22 +1,9 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import YouTube from 'react-youtube';
-import scroll from "../hooks/Scroll";
 import {MdHistoryEdu} from "react-icons/md"
 import rodrimar from "../assets/images/rodrimarNoBG.png"
-import Carousel from "./NHistoriaCarrossel/CarrosselH";
+import YouTube from 'react-youtube';
 export default function NossaHistoria(){
-
-  const MdHistoryIcon = styled(MdHistoryEdu)`
-  font-size: 200px;
-  margin-left: 18vw;
-  color: white;
-  transition: transform 0.2s; 
-  
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
 
      const opts = {
          playerVars: {
@@ -42,7 +29,7 @@ export default function NossaHistoria(){
     <img src={rodrimar}/>
             </Left>
             <Right>
-            <Carousel/>
+            <YouTube videoId="4Se-PKhXZhU" opts={opts}/>
             </Right>
         </Container >
 
@@ -98,6 +85,15 @@ display:flex;
 justify-content:center;
 align-items:center;
 backdrop-filter: blur(5px);
+iframe{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 454px;
+    width: 800px;
+    @media (max-width: 1200px) {
+    width: 350px;
+    height: 200px;
+  }}
 `
 
 

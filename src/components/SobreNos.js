@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import scroll from "../hooks/Scroll";
+import Carousel from "./NHistoriaCarrossel/CarrosselH";
 import {BsTruck} from "react-icons/bs"
 export default function SobreNos(){
 
@@ -17,6 +18,8 @@ export default function SobreNos(){
 `;
 
      const opts = {
+        width:'800',
+        height:'454',
          playerVars: {
            controls: 0,
            fs: 0,
@@ -40,6 +43,9 @@ export default function SobreNos(){
     </p>
     <BsTruckIcon/>
             </Left>
+            <Right>
+            <Carousel/>
+            </Right>
         </Container >
 
     )
@@ -67,10 +73,10 @@ h1 {
     }
     p {
     color: white;
-    margin: 10vh 3vw;
+    margin: 4vh 3vw;
     font-size:30px;
     line-height: 1.5;
-    width:70vw;
+    width:30vw;
   }
 @media (max-width: 1200px) {
     flex-direction: column-reverse;
@@ -82,8 +88,24 @@ h1 {
 `
 
 const Left = styled.div`
-width:79vw;
+width:40vw;
 backdrop-filter: blur(5px);
 `
+const Right = styled.div`
+width:40vw;
+backdrop-filter: blur(5px);
+display:flex;
+justify-content:center;
+align-items:center;
+iframe{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 454px;
+    width: 800px;
+    @media (max-width: 1200px) {
+    width: 350px;
+    height: 200px;
+  }}
 
+`
 
