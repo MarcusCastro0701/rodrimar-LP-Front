@@ -71,7 +71,9 @@ const Container = styled.div `
         z-index: 1;
     }
     @media (max-width: 1200px) {
-    margin-top: -90px;
+    flex-direction: column;
+    height: 1200px;
+    justify-content: space-evenly;
 }
     
 `
@@ -92,6 +94,11 @@ const SubContainer = styled.div`
     transition: all 0.2s ease-in-out;
     transform: scale(1.03);
   }
+  @media (max-width: 1200px) {
+    width: 90%;
+    height: 300px; 
+    padding: 5px 20px 20px 20px;
+}
     div{
         display: flex;
         flex-direction: column;
@@ -102,6 +109,10 @@ const SubContainer = styled.div`
         border-radius:10px;
         margin-bottom: 60px;
         cursor: pointer;
+        @media (max-width: 1200px) {
+        height: 80px; 
+        margin-bottom: 15px;
+    }
     }
     p{
         font-size: 25px;
@@ -109,7 +120,8 @@ const SubContainer = styled.div`
         font-weight: 500;
         line-height: 50px;
         @media (max-width: 1200px) {
-            font-size: 30px;
+            font-size: 18px;
+            line-height: 25px;
 }
     }
     h1{
@@ -117,7 +129,7 @@ const SubContainer = styled.div`
         color: #0F014D;
         font-weight: 700;
         @media (max-width: 1200px) {
-            font-size: 30px;
+            font-size: 22px;
             text-align: center;
 }
     }
@@ -129,6 +141,10 @@ const Eye = styled(AiOutlineEye)`
     color: #0F014D;
     margin-top: 15px;
     cursor: pointer;
+    @media (max-width: 1200px) {
+    width: 80px;
+    height: 80px; 
+}
 `
 const Target = styled(TbTargetArrow)`
     height: 100px;
@@ -136,6 +152,10 @@ const Target = styled(TbTargetArrow)`
     color: #0F014D;
     margin-top: 15px;
     cursor: pointer;
+    @media (max-width: 1200px) {
+    width: 80px;
+    height: 80px; 
+}
 `
 const Values = styled(BiDonateHeart)`
     height: 100px;
@@ -143,4 +163,8 @@ const Values = styled(BiDonateHeart)`
     color: #0F014D;
     margin-top: 15px;
     cursor: pointer;
+    @media (max-width: 1200px) {
+    width: 80px;
+    height: 80px; 
+}
 `
