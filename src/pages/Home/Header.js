@@ -138,6 +138,10 @@ h1{
 img{
   width: 120px;
   height: 100px;
+  @media (max-width: 1200px) {
+    width: 72px;
+    height: 60px;
+}
 }
 @media (max-width: 1200px) {
   display:flex;
