@@ -55,9 +55,15 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'servicos' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'servicos', position: 2780})}
+          onClick={() => handleItemClick({item: 'servicos', position: 2720})}
         >
           Serviços
+        </div>
+        <div
+          className={selectedItem === 'Contato' ? 'selected' : ''}
+          onClick={() => handleItemClick({item: 'Contato', position: 3710})}
+        >
+          Contato
         </div>
       </HeaderItems>
     </Container>
