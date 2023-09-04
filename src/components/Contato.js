@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import {FaSearchPlus, FaPhone} from "react-icons/fa"
 import {MdEmail} from "react-icons/md"
-import rodrimar from "../assets/images/rodrimarNoBG.png"
+import rodrimar from "../assets/images/rodrimarNoBGBlue.png"
 import YouTube from 'react-youtube';
 import MapaRodrimar from "./ContatoItens/MapaRodrimar";
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
@@ -96,7 +96,7 @@ display: flex;
 justify-content:center;
 width: 99.2vw;
 height: 80vh;
-background: linear-gradient(to right,rgba(15, 1, 77, 0.85)50%,rgba(15, 1, 77, 0.85)50%), url("https://img.freepik.com/fotos-gratis/foto-de-uma-estrada-rodeada-por-campos-de-grama-seca-sob-um-ceu-durante-o-por-do-sol_181624-10934.jpg?w=1380&t=st=1693771873~exp=1693772473~hmac=876cfd89527b8c9d51114d8660786ae48aecc6a5090b47a51854055fe368b522") no-repeat center center / cover;
+background: linear-gradient(to right, rgba(255, 255, 255, 0.7)50%, rgba(255, 255, 255, 0.7)50%), url("https://images.pexels.com/photos/977213/pexels-photo-977213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 h1 {
         padding-left: 1vw;
@@ -106,14 +106,15 @@ h1 {
         width: 100%;
         margin: 0 3vw;
         margin-top:10vh;
-        color:white;
+        color:rgb(15, 1, 77);
         height:32px;
     }
     p {
-    color: white;
+    color: rgb(15, 1, 77);
     margin: 2vh 3vw;
-    font-size:20px;
+    font-size:25px;
     line-height: 1.5;
+    font-weight: 700;
     width:30vw;
     display:flex;
     align-items:center;
