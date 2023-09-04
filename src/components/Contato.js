@@ -1,9 +1,46 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
-import {MdHistoryEdu} from "react-icons/md"
+import {FaSearchPlus, FaPhone} from "react-icons/fa"
+import {MdEmail} from "react-icons/md"
 import rodrimar from "../assets/images/rodrimarNoBG.png"
 import YouTube from 'react-youtube';
-export default function NossaHistoria(){
+import MapaRodrimar from "./ContatoItens/MapaRodrimar";
+import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
+export default function Contato(){
+    const SearchIcon = styled(FaSearchPlus)`
+      font-size: 30px;
+      margin-right: 0.5vw;
+      color: white;
+      transition: transform 0.2s; 
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    `;
+  
+   const PhoneIcon= styled(FaPhone)`
+  font-size: 30px;
+  margin-right: 0.5vw;
+  color: white;
+  transition: transform 0.2s; 
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  `;
+
+const EmailIcon= styled(MdEmail)`
+font-size: 30px;
+margin-right: 0.5vw;
+color: white;
+transition: transform 0.2s; 
+
+&:hover {
+  transform: scale(1.1);
+}
+`;
+
+
 
      const opts = {
          playerVars: {
@@ -21,15 +58,31 @@ export default function NossaHistoria(){
 
         <Container id="1">
             <Left>
-            <h1>{"Nossa História"}</h1>
-            <p>Fundada em 2 de maio de 1970 por Celso Rodrigues, a Rodrimar de Transporte é uma história de determinação, paixão e comprometimento que começou há mais de cinco décadas na cidade de Lavras.<br></br>
-            Desde o início, a missão da Rodrimar tem sido oferecer serviços de transporte de alta qualidade, baseados em princípios sólidos de confiabilidade e excelência.
-             O fundador Celso trouxe sua visão e expertise para criar uma empresa que rapidamente se destacou como um pilar da comunidade de Lavras e uma referência no setor de transporte.
-    </p>
-    <img src={rodrimar}/>
+            <h1>{"Contato e endereço"}</h1>
+            <MDBCol lg='6' className='my-4'>
+        <iframe
+          src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3718.030736127133!2d-44.978613!3d-21.2702509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9ffd88fff8038d%3A0x6203fb732a8a547a!2sTransporte%20Rodrimar!5e0!3m2!1spt-BR!2sbr!4v1693863803794!5m2!1spt-BR!2sbr'
+          className='w-100'
+          height='400'
+          loading='lazy'
+        ></iframe>
+      </MDBCol>
             </Left>
             <Right>
-            <YouTube videoId="4Se-PKhXZhU" opts={opts}/>
+            <p>
+                <SearchIcon/>
+             Endereço: R. Rosa Kasinski, 1195 - Santa Teresinha,<br></br> Lavras - MG, 37200-000
+            </p>
+            <p>
+            <PhoneIcon/>
+            Telefone: (35) 3821-6088
+            </p>
+            <p>
+                <EmailIcon/>
+            Email: rodrimar@gmail.com
+            </p>
+
+    <img src={rodrimar}/>
             </Right>
         </Container >
 
@@ -58,10 +111,12 @@ h1 {
     }
     p {
     color: white;
-    margin: 10vh 3vw;
-    font-size:22px;
+    margin: 2vh 3vw;
+    font-size:20px;
     line-height: 1.5;
     width:30vw;
+    display:flex;
+    align-items:center;
   }
 @media (max-width: 1200px) {
     flex-direction: column-reverse;
@@ -81,15 +136,9 @@ img{
     transform: scale(1.1);
   }
 }
-`
-const Right = styled.div`
-width:40vw;
-display:flex;
-justify-content:center;
-align-items:center;
-backdrop-filter: blur(5px);
 iframe{
     border-radius: 10px;
+    margin: 4vw 3vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     height: 454px;
     width: 800px;
@@ -97,6 +146,14 @@ iframe{
     width: 350px;
     height: 200px;
   }}
+`
+const Right = styled.div`
+width:40vw;
+display:flex;
+justify-content:center;
+align-items:center;
+backdrop-filter: blur(5px);
+flex-direction: column;
 `
 
 
