@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {FaSearchPlus, FaPhone} from "react-icons/fa"
 import {MdEmail} from "react-icons/md"
 import rodrimar from "../assets/images/rodrimarNoBGBlue.png"
-import YouTube from 'react-youtube';
-import MapaRodrimar from "./ContatoItens/MapaRodrimar";
-import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBCol } from 'mdb-react-ui-kit';
 export default function Contato(){
     const SearchIcon = styled(FaSearchPlus)`
       font-size: 30px;
