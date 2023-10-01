@@ -7,10 +7,13 @@ import {BsTruck} from "react-icons/bs"
 export default function SobreNos(){
 
   const BsTruckIcon = styled(BsTruck)`
-  font-size: 200px;
+  font-size: 20vh;
   margin-left: 18vw;
   color: white;
   transition: transform 0.2s; 
+  @media(max-width: 1200px) {
+    display:none;
+  }
   
   &:hover {
     transform: scale(1.1);
@@ -63,7 +66,7 @@ box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 3
 h1 {
         padding-left: 1vw;
         border-left: 8px solid #09DCFF;
-        font-size: 32px;
+        font-size: 3vh;
         font-weight: 600;
         width: 100%;
         margin: 0 3vw;
@@ -74,22 +77,31 @@ h1 {
     p {
     color: white;
     margin: 4vh 3vw;
-    font-size:30px;
+    font-size:1.8vh;
     line-height: 1.5;
     width:30vw;
   }
 @media (max-width: 1200px) {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
-    width: 100%;
+  flex-direction: column;
+  width: 100%;
+  h1{
+    margin-top: 5vh;
+  }
+    p{
+      font-size:1.6vh;
+      height:10vh;
+      width:80vw;
+      margin: 5vh 3vw;
+    }
   }
 `
 
 const Left = styled.div`
 width:40vw;
 backdrop-filter: blur(5px);
+@media (max-width:1200px) {
+  margin:2vh 4vw;
+}
 `
 const Right = styled.div`
 width:40vw;
@@ -97,15 +109,13 @@ backdrop-filter: blur(5px);
 display:flex;
 justify-content:center;
 align-items:center;
-iframe{
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    height: 454px;
-    width: 800px;
-    @media (max-width: 1200px) {
-    width: 350px;
-    height: 200px;
-  }}
+
+  @media (max-width: 1200px) {
+    width:40vw;
+    height:40vw;
+    backdrop-filter: none;
+    margin:auto;
+  }
 
 `
 
