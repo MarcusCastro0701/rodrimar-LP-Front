@@ -47,6 +47,11 @@ const CarouselContainer = styled.div`
   justify-content: space-around;
   text-align: center;
   width: 40vw;
+
+  @media (max-width: 1200px) {
+    margin-top:4vh;
+    width: 60vw;
+  }
 `;
 
 const Image = styled.div`
@@ -60,5 +65,13 @@ const Image = styled.div`
     opacity: ${(props) => props.opc};
     transition: opacity 0.4s; 
   }
+  @media (max-width: 1200px) {
+    margin-top:10vh;
+    img{
+      max-height: 500px;
+       min-width: 55vw;
+    }
+  }
+  
 `;
 

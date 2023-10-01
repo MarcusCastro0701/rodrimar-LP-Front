@@ -29,11 +29,6 @@ export default function Header() {
     src={rodrimarNoBG}
     alt="Logo"
   />
-        <h1
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-    </h1>
         </Logo>
         <div
           className={selectedItem === 'home' ? 'selected' : ''}
@@ -43,25 +38,25 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'sobre' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'sobre', position: 720})}
+          onClick={() => handleItemClick({item: 'sobre', position: 800})}
         >
           Sobre nós
         </div>
         <div
           className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'equipe', position: 1750})}
+          onClick={() => handleItemClick({item: 'equipe', position: 1650})}
         >
-          Equipe
+          Nossos Valores
         </div>
         <div
           className={selectedItem === 'servicos' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'servicos', position: 2720})}
+          onClick={() => handleItemClick({item: 'servicos', position: 2450})}
         >
-          Serviços
+          Nossa história
         </div>
         <div
           className={selectedItem === 'Contato' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'Contato', position: 3710})}
+          onClick={() => handleItemClick({item: 'Contato', position: 3190})}
         >
           Contato
         </div>
@@ -84,7 +79,6 @@ align-items:center;
 width:100%;
 height:150px;
 position: fixed;
-z-index: 100000;
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -99,6 +93,7 @@ z-index: 100000;
 }
 @media (max-width: 1200px) {
   height: 12vh;
+  width:100vw;
 }
 `;
 
@@ -121,13 +116,9 @@ width:90%;
   @media (max-width: 1200px) {
     width:95%;
     justify-content:space-between;
-    h1{
-      font-size:20px;
-    }
-    
   div {
     cursor: pointer;
-    font-size: 3.5vw;
+    font-size: 2.8vw;
     font-weight:600;
   }
   }
@@ -152,12 +143,16 @@ img{
 @media (max-width: 1200px) {
   display:flex;
 flex-direction:column;
-    width:70px;
+    width:10vw;
     border-radius: 30px;
     h1 {
     font-size: 10px;
     display: flex;
     justify-content: space-between;
+  }
+  img{
+    width:10vw;
+    height:10vw;
   }
     }
 
