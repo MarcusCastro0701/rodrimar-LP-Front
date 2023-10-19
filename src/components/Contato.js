@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {FaSearchPlus, FaPhone} from "react-icons/fa"
 import {MdEmail} from "react-icons/md"
 import rodrimar from "../assets/images/rodrimarNoBGBlue.png"
-import YouTube from 'react-youtube';
-import MapaRodrimar from "./ContatoItens/MapaRodrimar";
-import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBCol } from 'mdb-react-ui-kit';
 export default function Contato(){
     const SearchIcon = styled(FaSearchPlus)`
       font-size: 30px;
@@ -70,15 +68,15 @@ transition: transform 0.2s;
             </Left>
             <Right>
             <p>
-                <SearchIcon/>
+                <SearchIcon color={"#0F014D"}/>
              Endereço: R. Rosa Kasinski, 1195 - Santa Teresinha,<br></br> Lavras - MG, 37200-000
             </p>
             <p>
-            <PhoneIcon/>
+            <PhoneIcon color={"#0F014D"}/>
             Telefone: (35) 3821-6088
             </p>
             <p>
-                <EmailIcon/>
+                <EmailIcon color={"#0F014D"}/>
             Email: rodrimar@gmail.com
             </p>
 
@@ -119,12 +117,21 @@ h1 {
     display:flex;
     align-items:center;
   }
-@media (max-width: 1200px) {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
-    width: 100%;
+  @media (max-width: 1200px) {
+    display:flex;
+  flex-direction: column;
+  width: 100%;
+  h1{
+    margin-top: 5vh;
+    font-size:6vw;
+    width:80vw;
+  }
+    p{
+      font-size:1.6vh;
+      height:10vh;
+      width:80vw;
+      margin: 3vh 3vw;
+    }
   }
 `
 
@@ -141,20 +148,47 @@ iframe{
     border-radius: 10px;
     margin: 4vw 3vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    height: 454px;
-    width: 800px;
+    height: 40vh;
+    width: 40vw;
     @media (max-width: 1200px) {
-    width: 350px;
-    height: 200px;
+      height: 20vh;
+    width: 75vw;
+    margin-top: 5vh;
   }}
+  @media (max-width:1200px) {
+  margin:2vh 4vw;
+}
 `
 const Right = styled.div`
 width:40vw;
 display:flex;
+margin-left: 5vw;
 justify-content:center;
-align-items:center;
-backdrop-filter: blur(5px);
 flex-direction: column;
+  img{
+  margin-top: 10px;
+  height:9vh;
+  width:5vw;
+  margin: 0 45%;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width:1200px) {
+ display:none;
+}
+}
+  p{
+    font-size:1vw;
+}
+@media (max-width: 1200px) {
+    width:40vw;
+    height:40vw;
+    backdrop-filter: none;
+    margin:11vh 7vw;
+    p{
+      font-size:4vw;
+    }
+  }
 `
 
 

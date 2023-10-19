@@ -35,7 +35,7 @@ const Container = styled.div`
 const WhatsAppButton = styled.a`
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 7vw;
   width: 60px;
   height: 60px;
   border-radius: 50%;
