@@ -103,8 +103,11 @@ const SubContainer = styled.div`
         text-align: center;
         line-height: 20px;
         @media (max-width: 1200px) {
-            font-size: 20px;
+            font-size: 17px;
             width: 100%;
+            b{
+                font-size: 17px;
+            }
 }
     }
     div{

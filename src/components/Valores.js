@@ -89,6 +89,7 @@ const SubContainer = styled.div`
     width: 400px;
     padding: 15px 20px 0 20px;
     text-align: center;
+    cursor: pointer;
     border: 4px solid rgba(15, 1, 77, 0.7);
     &:hover {
     transition: all 0.2s ease-in-out;

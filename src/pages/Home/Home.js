@@ -6,10 +6,8 @@ import Timeline from "./Timeline";
 import Footer from "../../components/Footer";
 
 export default function Home() {
-  const whatsappNumber = "+5535910185219";
-  const whatsappMessage = `Olá equipe AlphaWeb,
-
-  espero que esteja tudo bem com vocês! Estou entrando em contato porque estou interessado em contratar os serviços de Desenvolvimento Web e Marketing Digital oferecidos pela AlphaWeb.`;
+  const whatsappNumber = "+553599716386";
+  const whatsappMessage = `Olá, eu gostaria de fazer uma cotação com o comercial da Rodrimar.`;
 
   return (
     <Container>

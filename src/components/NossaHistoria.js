@@ -22,10 +22,15 @@ export default function NossaHistoria(){
         <Container id="1">
             <Left>
             <h1>{"Nossa História"}</h1>
-            <p>Fundada em 2 de maio de 1970 por Celso Rodrigues, a Rodrimar de Transporte é uma história de determinação, paixão e comprometimento que começou há mais de cinco décadas na cidade de Lavras.<br></br>
-            Desde o início, a missão da Rodrimar tem sido oferecer serviços de transporte de alta qualidade, baseados em princípios sólidos de confiabilidade e excelência.
-             O fundador Celso trouxe sua visão e expertise para criar uma empresa que rapidamente se destacou como um pilar da comunidade de Lavras e uma referência no setor de transporte.
-    </p>
+            <p>
+              Fundada em 1 de abril de 1970 por Celso Rodrigues, a Transporte Rodrimar é uma história de determinação, paixão e comprometimento que começou há mais de cinco décadas na cidade de Lavras. Com sua visão e expertise, constituiu uma empresa que rapidamente se destacou no setor de transporte.
+            </p>
+
+            <p>
+              Desde o início, a missão da Rodrimar tem sido oferecer serviços de transporte de alta qualidade, baseados em princípios sólidos de confiabilidade e excelência.
+              O fundador Celso trouxe sua visão e expertise para criar uma empresa que rapidamente se destacou como um pilar da comunidade de Lavras e uma referência no setor de transporte.
+              </p>
+            
     <img src={rodrimar}/>
             </Left>
             <Right>
@@ -58,7 +63,7 @@ h1 {
     }
     p {
     color: white;
-    margin: 10vh 3vw;
+    margin: 5vh 3vw;
     font-size:1.8vh;
     line-height: 1.5;
     width:30vw;
@@ -85,7 +90,7 @@ const Left = styled.div`
 width:40vw;
 backdrop-filter: blur(5px);
 img{
-    margin-left: 5vw;
+    margin-left: 13.5vw;
     width:8vw;
     height:15vh;
     @media (max-width:1200px) {
@@ -97,6 +102,8 @@ img{
 
 }
 @media (max-width:1200px) {
+  display: flex;
+  flex-direction: column;
   margin:2vh 4vw;
 }
 `
@@ -114,7 +121,7 @@ iframe{
     @media (max-width: 1200px) {
     width: 77vw;
     height: 20vh;
-    margin-top: 10vh;
+    margin-top: 3vh;
   }}
   @media (max-width: 1200px) {
     width:40vw;
