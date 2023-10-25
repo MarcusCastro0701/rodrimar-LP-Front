@@ -39,11 +39,14 @@ export default function SobreNos(){
         <Container id="1">
             <Left>
             <h1>{"Sobre Nós"}</h1>
-            <p>Somos uma empresa de alto padrão e
-        excelência. Atuamos no setor de transportes de calcário, cal, carvão coque e farelo, além de transportes pesados com frota própria e agregados, abrangendo o transporte de minérios em geral (a granel e ensacados).<br></br>
-        No mercado há mais de 50 anos, a Transporte
-    Rodrimar é uma das empresas mais tradicionais em seus segmentos. Com uma frota acima de 60 veículos, nossa empresa oferece qualidade e eficiência, desenvolvendo um trabalho mais seguro aos nossos clientes e colaboradores.
-    </p>
+
+            <p>
+              Somos uma empresa de alto padrão e excelência. Atuamos no setor de transportes de calcário, cal, carvão coque e farelo, além de transportes pesados com frota própria e agregados, abrangendo o transporte de minérios em geral (a granel e ensacados).
+            </p>
+
+            <p>
+              No mercado há mais de 50 anos, a Transporte Rodrimar é uma das empresas mais tradicionais em seus segmentos. Com uma frota acima de 60 veículos, nossa empresa oferece qualidade e eficiência, desenvolvendo um trabalho mais seguro aos nossos clientes e colaboradores.
+            </p>
     <BsTruckIcon/>
             </Left>
             <Right>
@@ -91,7 +94,7 @@ h1 {
       font-size:1.6vh;
       height:10vh;
       width:80vw;
-      margin: 5vh 3vw;
+      margin: 6vh 3vw;
     }
   }
 `

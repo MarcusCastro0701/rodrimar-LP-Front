@@ -29,7 +29,7 @@ export default function NossaHistoria(){
             <p>
               Desde o início, a missão da Rodrimar tem sido oferecer serviços de transporte de alta qualidade, baseados em princípios sólidos de confiabilidade e excelência.
               O fundador Celso trouxe sua visão e expertise para criar uma empresa que rapidamente se destacou como um pilar da comunidade de Lavras e uma referência no setor de transporte.
-              </p>
+            </p>
             
     <img src={rodrimar}/>
             </Left>
@@ -69,7 +69,7 @@ h1 {
     width:30vw;
   }
   @media (max-width: 1200px) {
-    display:flex;
+  display:flex;
   flex-direction: column;
   width: 100%;
   h1{
@@ -78,10 +78,10 @@ h1 {
     width:80vw;
   }
     p{
-      font-size:1.6vh;
+      font-size:1.4vh;
       height:10vh;
       width:80vw;
-      margin: 3vh 3vw;
+      margin: 30px 0 0px 13px;
     }
   }
 `
@@ -121,7 +121,7 @@ iframe{
     @media (max-width: 1200px) {
     width: 77vw;
     height: 20vh;
-    margin-top: 3vh;
+    margin-top: -3vh;
   }}
   @media (max-width: 1200px) {
     width:40vw;
