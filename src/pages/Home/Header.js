@@ -7,13 +7,6 @@ import rodrimarNoBG from "../../assets/images/rodrimarNoBG.png";
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
@@ -43,20 +36,20 @@ export default function Header() {
           Sobre nós
         </div>
         <div
-          className={selectedItem === 'equipe' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'equipe', position: 1650})}
+          className={selectedItem === 'valores' ? 'selected' : ''}
+          onClick={() => handleItemClick({item: 'valores', position: 1650})}
         >
           Nossos Valores
         </div>
         <div
-          className={selectedItem === 'servicos' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'servicos', position: 2450})}
+          className={selectedItem === 'historia' ? 'selected' : ''}
+          onClick={() => handleItemClick({item: 'historia', position: 2500})}
         >
           Nossa história
         </div>
         <div
           className={selectedItem === 'Contato' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'Contato', position: 3190})}
+          onClick={() => handleItemClick({item: 'Contato', position: 3240})}
         >
           Contato
         </div>

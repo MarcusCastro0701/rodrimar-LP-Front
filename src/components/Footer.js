@@ -2,16 +2,15 @@ import styled from "styled-components";
 import rodrimarNoBG from "../assets/images/rodrimarNoBG.png"
 import {BsInstagram, BsWhatsapp} from 'react-icons/bs'
 import {FaTiktok} from 'react-icons/fa'
+import scroll from "../hooks/Scroll";
 
 export default function Footer(){
   const instagram = "https://www.instagram.com/transporterodrimar/"
-  const tiktok = "https://www.instagram.com/transporterodrimar/"
-  const numeroContato = "+5535999716386"
-  const whatsApp = `https://wa.me/${numeroContato}`
-  //`https://wa.me/${numeroContato}?text=${encodeURIComponent(msg)}`
+  const whatsappNumber = "+553599716386";
+  const whatsappMessage = `Olá, eu gostaria de fazer uma cotação com o comercial da Rodrimar.`;
 
-  const handleItemClick = ({position}) => {
-    scroll(position);
+  const handleItemClick = (item) => {
+    scroll(item.position);
   };
 
   return (
@@ -21,8 +20,9 @@ export default function Footer(){
         <h3>{"Conecte-se Conosco"}</h3>
         <SocialContainer>
           <a href={instagram} target="_blank" rel="noopener noreferrer"><BsInstagram/></a>
-          <a href={tiktok} target="_blank" rel="noopener noreferrer"><FaTiktok/></a>
-          <a href={whatsApp} target="_blank" rel="noopener noreferrer"><BsWhatsapp/></a>
+          <a href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()} rel="noopener noreferrer"><BsWhatsapp/></a>
         </SocialContainer>
       </TitleContainer>
 
@@ -34,16 +34,17 @@ export default function Footer(){
         <TextColumn>
           <h4>{"Nosso Site"}</h4>
           <h5 onClick={() => handleItemClick({position: 0})}>{"Página Inicial"}</h5>
-          <h5 onClick={() => handleItemClick({position: 0})}>{"Nossos Serviços"}</h5>
-          <h5 onClick={() => handleItemClick({position: 0})}>{"Fale Conosco"}</h5>
+          <h5 onClick={() => handleItemClick({position: 800})}>{"Sobre nós"}</h5>
+          <h5 onClick={() => handleItemClick({position: 1650})}>{"Valores"}</h5>
+          <h5 onClick={() => handleItemClick({position: 2500})}>{"História"}</h5>
+          <h5 onClick={() => handleItemClick({position: 3240})}>{"Contato"}</h5>
         </TextColumn>
 
         <TextColumn>
           <h4>{"Contato"}</h4>
-          <h5>{"contato@transportadorarodrimar.com.br"}</h5>
-          <h5>{"R. Rosa Kasinski, 1195 - Santa Teresinha, Lavras - MG, 37200-000"}</h5>
-          <h5>{"(35) 3821-6088"}</h5>
-          <h5>{"(35) 99971-6386"}</h5>
+          <h5>{"Email: comercial@rodrimar.net"}</h5>
+          <h5>{"Endereço: Rua Rosa Kasinski, 1195 - Distrito Industrial, Lavras - MG, 37205-842"}</h5>
+          <h5>{"Telefone: (35) 3821-6262"}</h5>
         </TextColumn>
 
       </SubContainer>

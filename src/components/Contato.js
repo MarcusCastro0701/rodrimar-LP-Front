@@ -69,15 +69,15 @@ transition: transform 0.2s;
             <Right>
             <p>
                 <SearchIcon color={"#0F014D"}/>
-             Endereço: R. Rosa Kasinski, 1195 - Santa Teresinha,<br></br> Lavras - MG, 37200-000
+                Endereço: Rua Rosa Kasinski, 1195 - Distrito Industrial,<br></br> Lavras - MG, 37205-842
             </p>
             <p>
             <PhoneIcon color={"#0F014D"}/>
-            Telefone: (35) 3821-6088
+            Telefone: (35) 3821-6262
             </p>
             <p>
                 <EmailIcon color={"#0F014D"}/>
-            Email: rodrimar@gmail.com
+                Email: comercial@rodrimar.net 
             </p>
 
     <img src={rodrimar}/>
@@ -166,9 +166,9 @@ margin-left: 5vw;
 justify-content:center;
 flex-direction: column;
   img{
-  margin-top: 10px;
-  height:9vh;
-  width:5vw;
+  margin-top: 50px !important;
+  height:18vh;
+  width:10vw;
   margin: 0 45%;
   &:hover {
     transform: scale(1.1);
