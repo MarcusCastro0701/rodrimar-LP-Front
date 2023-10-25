@@ -49,7 +49,7 @@ const CarouselContainer = styled.div`
   width: 40vw;
 
   @media (max-width: 1200px) {
-    margin-top:4vh;
+    margin-top:-10vh;
     width: 60vw;
   }
 `;
