@@ -51,7 +51,7 @@ export default function Footer(){
 
       <AboutContainer>
         <span>{"Todos Direitos Reservados ©"}</span>
-        <span>{"Desenvolvido por AlphaWeb"}</span>
+        <a href={'https://www.alphawebrasil.com.br'} target='_blank'>{"Desenvolvido por AlphaWeb"}</a>
       </AboutContainer>
 
     </Container>
@@ -159,6 +159,7 @@ const AboutContainer = styled.div`
   padding: 1.2vh 0;
   > :last-child {
     text-decoration: underline;
+    cursor: pointer;
   }
   @media (max-width: 850px) {
     font-size: 12px;
