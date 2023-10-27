@@ -95,7 +95,7 @@ const HeaderItems = styled.div`
   justify-content: space-around;
   color: white;
   align-items: center;
-width:90%;
+  width:90%;
 
   div {
     cursor: pointer;
@@ -111,7 +111,7 @@ width:90%;
     justify-content:space-between;
   div {
     cursor: pointer;
-    font-size: 2.8vw;
+    font-size: 2.1vw;
     font-weight:600;
   }
   }
