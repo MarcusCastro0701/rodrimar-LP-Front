@@ -6,7 +6,7 @@ import scroll from "../hooks/Scroll";
 
 export default function Footer(){
   const instagram = "https://www.instagram.com/transporterodrimar/"
-  const whatsappNumber = "+553599716386";
+  const whatsappNumber = "+553538216262";
   const whatsappMessage = `Olá, eu gostaria de fazer uma cotação com o comercial da Rodrimar.`;
 
   const handleItemClick = (item) => {

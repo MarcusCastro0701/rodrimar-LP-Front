@@ -6,7 +6,7 @@ import Timeline from "./Timeline";
 import Footer from "../../components/Footer";
 
 export default function Home() {
-  const whatsappNumber = "+553599716386";
+  const whatsappNumber = "+553538216262";
   const whatsappMessage = `Olá, eu gostaria de fazer uma cotação com o comercial da Rodrimar.`;
 
   return (
