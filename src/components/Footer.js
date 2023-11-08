@@ -59,7 +59,7 @@ export default function Footer(){
 }
 
 const Container = styled.footer`
-  background-color: #0f014dff;
+  background-color: #041c44;
   width: 100%;
   min-height: 300px;
   display: flex;

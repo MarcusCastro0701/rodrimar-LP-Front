@@ -61,7 +61,7 @@ export default function Header() {
 
 const Container = styled.div`
   z-index: 10000;
-	background: #0F014D;
+	background: #041c44;
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 150vh;
