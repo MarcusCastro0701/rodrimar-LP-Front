@@ -88,7 +88,7 @@ const SubContainer = styled.div`
     }
     h1{
         font-size: 40px;
-        color: #0F014D;
+        color: #041c44;
         font-weight: 700;
         @media (max-width: 1200px) {
             font-size: 30px;
@@ -114,7 +114,7 @@ const SubContainer = styled.div`
         width: 300px;
         height: 50px;
         color: white;
-        background-color: #0F014D;
+        background-color: #041c44;
         border-radius: 8px;
         display: flex;
         align-items: center;
@@ -126,7 +126,7 @@ const SubContainer = styled.div`
     color: black;
     font-weight: 800;
     font-size: 18px;
-    color: #0F014D;
+    color: #041c44;
 }
 img{
     @media (max-width: 1200px) {
@@ -142,7 +142,7 @@ img{
 const Icone = styled(BsArrowDownShort)`
     height: 50px;
     width: 50px;
-    color: #0F014D;
+    color: #041c44;
     margin-top: 15px;
     cursor: pointer;
 `
