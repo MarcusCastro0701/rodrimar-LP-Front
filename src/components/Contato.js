@@ -178,7 +178,7 @@ flex-direction: column;
 }
 }
   p{
-    font-size:1vw;
+    font-size:1.4vw;
 }
 @media (max-width: 1200px) {
     width:40vw;
@@ -186,7 +186,7 @@ flex-direction: column;
     backdrop-filter: none;
     margin:11vh 7vw;
     p{
-      font-size:4vw;
+      font-size:4.5vw;
     }
   }
 `

@@ -2,8 +2,6 @@ import styled from "styled-components";
 import React, { useEffect, useState } from 'react';
 import SobreNos from "../../components/SobreNos";
 import Inicio from "../../components/Inicio";
-import Equipe from "../../components/Equipe";
-import Servicos from "../../components/Servicos";
 import PartnersCarousel from "../../components/partners/PartnersCarousel";
 import Valores from "../../components/Valores"
 import NossaHistoria from "../../components/NossaHistoria";

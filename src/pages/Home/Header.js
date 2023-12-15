@@ -99,7 +99,7 @@ const HeaderItems = styled.div`
 
   div {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     font-weight:600;
   }
 
@@ -111,7 +111,7 @@ const HeaderItems = styled.div`
     justify-content:space-between;
   div {
     cursor: pointer;
-    font-size: 2.1vw;
+    font-size: 2.3vw;
     font-weight:600;
   }
   }
@@ -123,7 +123,7 @@ display:flex;
 justify-content:space-around;
 align-items:center;
 h1{
-  font-size:30px;
+  font-size:32px;
 }
 img{
   width: 120px;
@@ -139,7 +139,7 @@ flex-direction:column;
     width:10vw;
     border-radius: 30px;
     h1 {
-    font-size: 10px;
+    font-size: 13px;
     display: flex;
     justify-content: space-between;
   }

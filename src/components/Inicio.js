@@ -77,36 +77,36 @@ const SubContainer = styled.div`
     padding: 22px 100px 22px 100px;
     border-radius: 15px;
     p{
-        font-size: 15px;
+        font-size: 17px;
         color: black;
         margin-top: 8px;
         font-weight: 700;
         margin-bottom: 40px;
         @media (max-width: 1200px) {
-            font-size: 30px;
+            font-size: 33px;
 }
     }
     h1{
-        font-size: 40px;
+        font-size: 42px;
         color: #041c44;
         font-weight: 700;
         @media (max-width: 1200px) {
-            font-size: 30px;
+            font-size: 33px;
             text-align: center;
 }
     }
     h2{
         margin: 0px 0 15px 0;
-        font-size: 18px;
+        font-size: 20px;
         color: black;
         width: 700px;
         text-align: center;
         line-height: 20px;
         @media (max-width: 1200px) {
-            font-size: 17px;
+            font-size: 20px;
             width: 100%;
             b{
-                font-size: 17px;
+                font-size: 20px;
             }
 }
     }
@@ -125,7 +125,7 @@ const SubContainer = styled.div`
     b{
     color: black;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 21px;
     color: #041c44;
 }
 img{

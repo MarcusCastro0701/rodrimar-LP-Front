@@ -79,18 +79,18 @@ const TitleContainer = styled.div`
   justify-content: space-between;
   border-bottom: 2px solid #FFFFFF;
   > h3 {
-    font-size: 21px;
+    font-size: 24px;
   }
   svg {
-    font-size: 25px;
+    font-size: 27px;
     cursor: pointer;
   }
   @media (max-width: 850px) {
     > h3 {
-      font-size: 18px;
+      font-size: 20px;
     }
     svg {
-      font-size: 21px;
+      font-size: 24px;
     }
   }
 `
@@ -130,11 +130,11 @@ const TextColumn = styled.div`
   align-items: start;
   row-gap: 2vh;
   h4 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
   }
   h5 {
-    font-size: 14px;
+    font-size: 16px;
     max-width: 300px;
     cursor: pointer;
   }
@@ -143,10 +143,10 @@ const TextColumn = styled.div`
     max-width: 58%;
     h5 {
       width: 90%;
-      font-size: 10px;
+      font-size: 12px;
     }
     h4 {
-      font-size: 17px;
+      font-size: 20px;
     }
   }
 `
@@ -162,6 +162,6 @@ const AboutContainer = styled.div`
     cursor: pointer;
   }
   @media (max-width: 850px) {
-    font-size: 12px;
+    font-size: 15px;
   }
 `
