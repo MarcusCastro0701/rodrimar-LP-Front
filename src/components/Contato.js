@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import {FaSearchPlus, FaPhone} from "react-icons/fa"
 import {MdEmail} from "react-icons/md"
-import rodrimar from "../assets/images/rodrimarNoBGblue.png"
+import rodrimar from "../assets/images/test.png"
 import { MDBCol } from 'mdb-react-ui-kit';
 export default function Contato(){
     const SearchIcon = styled(FaSearchPlus)`
