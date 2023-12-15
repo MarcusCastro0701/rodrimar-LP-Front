@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import {FaSearchPlus, FaPhone} from "react-icons/fa"
 import {MdEmail} from "react-icons/md"
-import rodrimar from "../assets/images/rodrimarNoBGblue.png"
+import rodrimar from "../assets/images/rodrimarNoBGBlue.png"
 import { MDBCol } from 'mdb-react-ui-kit';
 export default function Contato(){
     const SearchIcon = styled(FaSearchPlus)`
@@ -68,15 +68,15 @@ transition: transform 0.2s;
             </Left>
             <Right>
             <p>
-                <SearchIcon color={"#041c44"}/>
+                <SearchIcon color={"#0F014D"}/>
                 Endereço: Rua Rosa Kasinski, 1195 - Distrito Industrial,<br></br> Lavras - MG, 37205-842
             </p>
             <p>
-            <PhoneIcon color={"#041c44"}/>
+            <PhoneIcon color={"#0F014D"}/>
             Telefone: (35) 3821-6262
             </p>
             <p>
-                <EmailIcon color={"#041c44"}/>
+                <EmailIcon color={"#0F014D"}/>
                 Email: comercial@rodrimar.net 
             </p>
 
@@ -142,8 +142,6 @@ img{
     margin-left: 5vw;
     &:hover {
     transform: scale(1.1);
-    background-color: #041c44;
-    color: #041c44;
   }
 }
 iframe{
