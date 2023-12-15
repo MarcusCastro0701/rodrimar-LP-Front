@@ -92,7 +92,7 @@ transition: transform 0.2s;
 const Container = styled.div `
 display: flex;
 justify-content:center;
-width: 99.2vw;
+width: 100%;
 height: 80vh;
 background: linear-gradient(to right, rgba(255, 255, 255, 0.7)50%, rgba(255, 255, 255, 0.7)50%), url("https://images.pexels.com/photos/977213/pexels-photo-977213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;

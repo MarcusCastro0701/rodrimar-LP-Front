@@ -63,7 +63,7 @@ export default function SobreNos(){
 const Container = styled.div `
 display: flex;
 justify-content:center;
-width: 99.2vw;
+width: 100%;
 height: 80vh;
 background: linear-gradient(to right,rgba(4, 28, 68, 1),rgba(4, 28, 68, 0.6)), url("https://img.freepik.com/fotos-gratis/veiculo-de-caminhao-longo-pronto-para-entrega-e-transporte_342744-1294.jpg?w=1380&t=st=1693518357~exp=1693518957~hmac=52dfcf984acf66992463f98a8b5085988eb64367a3b6567f02c5127d43f57ef9") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
