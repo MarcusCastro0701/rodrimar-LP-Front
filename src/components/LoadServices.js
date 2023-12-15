@@ -31,14 +31,14 @@ const Service = styled.div`
   h1 {
     width: 20%;
     display: flex;
-    font-size: 35px;
+    font-size: 37px;
 flex-direction: column;
     color: #1F22DA;
     align-items: center;
     justify-content: center;
     @media (max-width: 1200px) {
       position: absolute;
-      font-size: 20px;
+      font-size: 23px;
       width: 60%;
       height: 5vh;
       border-radius: 5px;
@@ -51,7 +51,7 @@ flex-direction: column;
     color: #1F22DA;
     width: 80%;
     padding: 10px;
-    font-size: 22px;
+    font-size: 25px;
     display: flex;
     flex-wrap: wrap; /* Ajuste para o alinhamento dos li */
     align-items: center;
@@ -71,7 +71,7 @@ flex-direction: column;
     }
 
     @media (max-width: 1200px) {
-      font-size: 15px;
+      font-size: 17px;
       display: flex;
       justify-content: center;
       margin-top: 5vh;

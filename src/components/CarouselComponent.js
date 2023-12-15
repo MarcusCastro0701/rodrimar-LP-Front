@@ -19,20 +19,20 @@ align-items: center;
 justify-content: center;
 p{
   color: white;
-  font-size: 32px;
+  font-size: 34px;
   margin-top: 10px;
   display: flex;
   flex-direction:column;
   @media (max-width: 1200px) {
-    font-size: 27px;
+    font-size: 30px;
     line-height: 30px;
   }
   b{
     color: white;
-    font-size: 25px;
+    font-size: 28px;
     margin-top: 15px;
     @media (max-width: 1200px) {
-      font-size: 23px;
+      font-size: 25px;
       line-height: 25px;
       margin-bottom: 30px;
     }

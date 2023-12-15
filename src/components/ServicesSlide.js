@@ -36,9 +36,9 @@ const Title = styled.div`
   justify-content: center;
   border-radius: 15px;
   h1 {
-    font-size: 45px;
+    font-size: 49px;
     @media (max-width: 1200px) {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
   @media (max-width: 1200px) {
@@ -59,7 +59,7 @@ const Description = styled.div`
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.5em;
     background-color:red;
     

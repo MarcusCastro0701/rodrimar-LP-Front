@@ -90,7 +90,7 @@ const SubContainer = styled.div`
     padding: 15px 20px 0 20px;
     text-align: center;
     cursor: pointer;
-    border: 4px solid rgba(15, 1, 77, 0.7);
+    border: 4px solid rgba(4, 28, 68, 0.95);
     &:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.03);
@@ -116,21 +116,21 @@ const SubContainer = styled.div`
     }
     }
     p{
-        font-size: 25px;
+        font-size: 28px;
         color: black;
         font-weight: 500;
         line-height: 50px;
         @media (max-width: 1200px) {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 25px;
 }
     }
     h1{
-        font-size: 40px;
-        color: #0F014D;
+        font-size: 42px;
+        color: #041c44;
         font-weight: 700;
         @media (max-width: 1200px) {
-            font-size: 22px;
+            font-size: 25px;
             text-align: center;
 }
     }
@@ -139,7 +139,7 @@ const SubContainer = styled.div`
 const Eye = styled(AiOutlineEye)`
     height: 100px;
     width: 100px;
-    color: #0F014D;
+    color: #041c44;
     margin-top: 15px;
     cursor: pointer;
     @media (max-width: 1200px) {
@@ -150,7 +150,7 @@ const Eye = styled(AiOutlineEye)`
 const Target = styled(TbTargetArrow)`
     height: 100px;
     width: 100px;
-    color: #0F014D;
+    color: #041c44;
     margin-top: 15px;
     cursor: pointer;
     @media (max-width: 1200px) {
@@ -161,7 +161,7 @@ const Target = styled(TbTargetArrow)`
 const Values = styled(BiDonateHeart)`
     height: 100px;
     width: 100px;
-    color: #0F014D;
+    color: #041c44;
     margin-top: 15px;
     cursor: pointer;
     @media (max-width: 1200px) {
