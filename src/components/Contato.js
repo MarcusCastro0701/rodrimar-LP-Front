@@ -144,7 +144,6 @@ img{
     transform: scale(1.1);
     background-color: #041c44;
     color: #041c44;
-    margin-right: 40px;
   }
 }
 iframe{
