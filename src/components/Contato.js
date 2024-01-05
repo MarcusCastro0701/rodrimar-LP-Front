@@ -68,15 +68,15 @@ transition: transform 0.2s;
             </Left>
             <Right>
             <p>
-                <SearchIcon color={"#041c44"}/>
+                <SearchIcon color={"#0F014D"}/>
                 Endereço: Rua Rosa Kasinski, 1195 - Distrito Industrial,<br></br> Lavras - MG, 37205-842
             </p>
             <p>
-            <PhoneIcon color={"#041c44"}/>
+            <PhoneIcon color={"#0F014D"}/>
             Telefone: (35) 3821-6262
             </p>
             <p>
-                <EmailIcon color={"#041c44"}/>
+                <EmailIcon color={"#0F014D"}/>
                 Email: comercial@rodrimar.net 
             </p>
 
@@ -92,7 +92,7 @@ transition: transform 0.2s;
 const Container = styled.div `
 display: flex;
 justify-content:center;
-width: 99.2vw;
+width: 100%;
 height: 80vh;
 background: linear-gradient(to right, rgba(255, 255, 255, 0.7)50%, rgba(255, 255, 255, 0.7)50%), url("https://images.pexels.com/photos/977213/pexels-photo-977213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -142,8 +142,6 @@ img{
     margin-left: 5vw;
     &:hover {
     transform: scale(1.1);
-    background-color: #041c44;
-    color: #041c44;
   }
 }
 iframe{
