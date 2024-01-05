@@ -108,11 +108,11 @@ backdrop-filter: blur(5px);
 }
 `
 const Right = styled.div`
-width:40vw;
 backdrop-filter: blur(5px);
 display:flex;
 justify-content:center;
 align-items:center;
+
 
   @media (max-width: 1200px) {
     width:40vw;

@@ -6,6 +6,7 @@ import PartnersCarousel from "../../components/partners/PartnersCarousel";
 import Valores from "../../components/Valores"
 import NossaHistoria from "../../components/NossaHistoria";
 import Contato from "../../components/Contato";
+import News from "../../components/News";
 
 
 export default function Timeline() {
@@ -17,6 +18,7 @@ export default function Timeline() {
       <Valores/>
       <NossaHistoria/>
       <Contato/>
+      <News/>
       <PartnersCarousel/>
     </MainContainer>
   );
