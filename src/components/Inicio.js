@@ -1,12 +1,10 @@
+import React, { useEffect, useState } from 'react';
+import { BsArrowDownShort } from "react-icons/bs";
 import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import {BsArrowDownShort} from "react-icons/bs";
-import {TbTargetArrow} from "react-icons/tb";
-import {AiOutlineEye} from "react-icons/ai"
-import scroll from "../hooks/Scroll";
 import caminhao2 from "../assets/images/caminhao2.jpg";
 import caminhao3 from "../assets/images/caminhao3.jpg";
-import rodrimarNoBG2 from "../assets/images/rodrimarNoBG2.png";
+import newLogoNoBG from "../assets/images/newLogoNoBG.png";
+import scroll from "../hooks/Scroll";
 
 
 export default function Inicio(){
@@ -33,7 +31,7 @@ export default function Inicio(){
     return(
         <Container style={backgroundImageStyle}>
             <SubContainer>
-                <img src={rodrimarNoBG2}/>
+                <img src={newLogoNoBG}/>
                 <h2>
                     Transporte de cargas feito com <b>dedicação</b>, <b>pontualidade</b> e <b>segurança</b>.
                 </h2>
@@ -129,6 +127,7 @@ const SubContainer = styled.div`
     color: #041c44;
 }
 img{
+    border-radius: 18px;
     @media (max-width: 1200px) {
         width: 350px;
         height: 130px;

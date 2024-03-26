@@ -1,14 +1,10 @@
+import React, { useEffect, useState } from 'react';
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import YouTube from 'react-youtube';
-import scroll from "../hooks/Scroll";
-import caminhao2 from "../assets/images/caminhao2.jpg"
-import confraternizacao2 from "../assets/images/confraternizacao-2.jpg"
-import iso from "../assets/images/iso.jpg"
-import frota2 from "../assets/images/frota-2.jpg"
-import rodrimarWhiteBG from "../assets/images/rodrimarWhiteBG.jpg"
-import { IoIosArrowDropleft } from "react-icons/io";
-import { IoIosArrowDropright } from "react-icons/io";
+import frota2 from "../assets/images/frota-2.jpg";
+import iso from "../assets/images/iso.jpg";
+import newLogo from "../assets/images/newLogo.jpg";
+import treinamentoISO from "../assets/images/treinamentoISO.jpg";
 
 
 export default function News(){
@@ -27,15 +23,15 @@ export default function News(){
     },
 
     { 
-      titulo: 'Confraternização de fim de ano', 
-      texto: 'Todo fim de ano, a Transporte Rodrimar realiza a confraternização da empresa, com os diretores, colaboradores do escritório, motoristas e suas famílias. Com a contribuição de alguns fornecedores e a vinda do Papai Noel, a empresa distribuiu presentes a todas as crianças presentes no local.',
-      imagem: confraternizacao2 
+      titulo: 'Treinamento ISO 9001', 
+      texto: 'No fim de fevereiro, demos início ao treinamento da ISO 9001, direcionado aos motoristas. A equipe administrativa preparou um café da manhã para motivar os colaboradores e foi um domingo super produtivo!',
+      imagem: treinamentoISO
     },
 
     { 
       titulo: 'Transformação em Curso', 
       texto: 'A Transporte Rodrimar embarca em uma jornada de renovação de identidade visual para refletir o futuro inovador. Esta reestruturação representa um capítulo emocionante e transformador em sua trajetória, prometendo um futuro vibrante e alinhado com as demandas do mercado global.',
-      imagem: rodrimarWhiteBG
+      imagem: newLogo
     },
     
   ];
@@ -70,7 +66,7 @@ export default function News(){
       
         <MainContainer>
 
-          <h1>Ultimas notícias</h1>
+          <h1>Últimas notícias</h1>
 
           <SubContainer id="1">
 

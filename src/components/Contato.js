@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import {FaSearchPlus, FaPhone} from "react-icons/fa"
-import {MdEmail} from "react-icons/md"
-import rodrimar from "../assets/images/rodrimarNoBGBlue.png"
 import { MDBCol } from 'mdb-react-ui-kit';
+import React from 'react';
+import { FaPhone, FaSearchPlus } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import styled from "styled-components";
+import rodrimar from "../assets/images/newLogoTRNoBG.png";
 export default function Contato(){
     const SearchIcon = styled(FaSearchPlus)`
       font-size: 30px;
@@ -39,19 +39,6 @@ transition: transform 0.2s;
 `;
 
 
-
-     const opts = {
-         playerVars: {
-           controls: 1,
-           fs: 0,
-           iv_load_policy: 3,
-           modestbranding: 1,
-           showinfo: 0,
-           loop: 0,
-           rel: 0,
-         },
-       };
-
     return(
 
         <Container id="1">
@@ -68,15 +55,15 @@ transition: transform 0.2s;
             </Left>
             <Right>
             <p>
-                <SearchIcon color={"#0F014D"}/>
+                <SearchIcon color={" #041c44"}/>
                 Endereço: Rua Rosa Kasinski, 1195 - Distrito Industrial,<br></br> Lavras - MG, 37205-842
             </p>
             <p>
-            <PhoneIcon color={"#0F014D"}/>
+            <PhoneIcon color={" #041c44"}/>
             Telefone: (35) 3821-6262
             </p>
             <p>
-                <EmailIcon color={"#0F014D"}/>
+                <EmailIcon color={" #041c44"}/>
                 Email: comercial@rodrimar.net 
             </p>
 
@@ -104,11 +91,11 @@ h1 {
         width: 100%;
         margin: 0 3vw;
         margin-top:10vh;
-        color:rgb(15, 1, 77);
+        color:  #041c44 !important;
         height:32px;
     }
     p {
-    color: rgb(15, 1, 77);
+    color:  #041c44 !important;;
     margin: 2vh 3vw;
     font-size:25px;
     line-height: 1.5;
@@ -166,10 +153,9 @@ margin-left: 5vw;
 justify-content:center;
 flex-direction: column;
   img{
-  margin-top: 50px !important;
   height:18vh;
   width:10vw;
-  margin: 0 45%;
+  margin-left: 27%;
   &:hover {
     transform: scale(1.1);
   }
