@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import {MdHistoryEdu} from "react-icons/md"
-import rodrimar from "../assets/images/rodrimarNoBG.png"
+import React from 'react';
 import YouTube from 'react-youtube';
+import styled from "styled-components";
+import newLogoWhiteNoBG from '../assets/images/newLogoWhiteNoBG.png';
+
 export default function NossaHistoria(){
 
      const opts = {
@@ -30,10 +30,9 @@ export default function NossaHistoria(){
               Desde o início, a missão da Rodrimar tem sido oferecer serviços de transporte de alta qualidade, baseados em princípios sólidos de confiabilidade e excelência.
               O fundador Celso trouxe sua visão e expertise para criar uma empresa que rapidamente se destacou como um pilar da comunidade de Lavras e uma referência no setor de transporte.
             </p>
-            
-    <img src={rodrimar}/>
             </Left>
             <Right>
+            <img src={newLogoWhiteNoBG}/>
             <YouTube videoId="4Se-PKhXZhU" opts={opts}/>
             </Right>
         </Container >
@@ -93,12 +92,13 @@ img{
     margin-left: 13.5vw;
     width:8vw;
     height:15vh;
+    margin-top: -2vh;
     @media (max-width:1200px) {
       display:none;
       
     }
     &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
 }
@@ -114,7 +114,13 @@ width:40vw;
 display:flex;
 justify-content:center;
 align-items:center;
+flex-direction: column;
 backdrop-filter: blur(5px);
+img{
+  width: 33.7vw;
+  height: 7vw;
+  margin-bottom: 3vh;
+}
 iframe{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;

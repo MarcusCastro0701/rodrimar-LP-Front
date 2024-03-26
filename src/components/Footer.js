@@ -1,7 +1,6 @@
+import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 import styled from "styled-components";
-import rodrimarNoBG from "../assets/images/rodrimarNoBG.png"
-import {BsInstagram, BsWhatsapp} from 'react-icons/bs'
-import {FaTiktok} from 'react-icons/fa'
+import rodrimarNoBG from "../assets/images/newLogoTRWhiteNoBG1.png";
 import scroll from "../hooks/Scroll";
 
 export default function Footer(){
@@ -116,7 +115,9 @@ const SubContainer = styled.div`
 `
 const ImageContainer = styled.div`
   img {
-    max-height: 100%;
+    height: 15vh;
+    width: 20vh;
+    
     cursor: pointer;
   }
   @media (max-width: 850px) {

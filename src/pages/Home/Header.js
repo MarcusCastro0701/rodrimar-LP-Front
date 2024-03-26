@@ -1,11 +1,10 @@
+import React, { useState } from 'react';
 import styled from "styled-components";
-import React, { useState, useRef } from 'react';
-import 'primeicons/primeicons.css';
+import logo from "../../assets/images/newLogoTRWhiteNoBG1.png";
 import scroll from "../../hooks/Scroll";
-import rodrimarNoBG from "../../assets/images/rodrimarNoBG.png";
+
 
 export default function Header() {
-  const [isHovered, setIsHovered] = useState(false);
 
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -19,8 +18,8 @@ export default function Header() {
       <HeaderItems>
         <Logo>
         <img
-    src={rodrimarNoBG}
-    alt="Logo"
+        alt="Logo"
+        src={logo}
   />
         </Logo>
         <div
@@ -111,6 +110,7 @@ const HeaderItems = styled.div`
 
   .selected {
     color: #00efff;
+
   }
   @media (max-width: 1200px) {
     width:95%;
@@ -132,8 +132,10 @@ h1{
   font-size:32px;
 }
 img{
-  width: 120px;
+  width: 160px;
   height: 100px;
+  border-radius: 15px;
+  background-color: none;
   @media (max-width: 1200px) {
     width: 72px;
     height: 60px;
