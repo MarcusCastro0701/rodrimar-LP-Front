@@ -92,10 +92,14 @@ position: fixed;
 @media (max-width: 1200px) {
   height: 12vh;
   width:100vw;
+  display: none !important;
+  div{
+    display: none !important;
+  }
 }
 `;
 
-const HeaderItems = styled.div`
+const HeaderItems = styled.span`
   display: flex;
   justify-content: space-around;
   color: white;
@@ -114,7 +118,7 @@ const HeaderItems = styled.div`
   }
   @media (max-width: 1200px) {
     width:95%;
-    justify-content:space-between;
+    justify-content:center;
   div {
     cursor: pointer;
     font-size: 2.3vw;
@@ -123,7 +127,7 @@ const HeaderItems = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled.span`
 width:250px;
 display:flex;
 justify-content:space-around;
