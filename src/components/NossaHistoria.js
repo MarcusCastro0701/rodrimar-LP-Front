@@ -80,7 +80,7 @@ h1 {
       font-size:1.6vh;
       height:10vh;
       width:80vw;
-      margin: 3vh 0 30px 13px;
+      margin: 3vh 0 40px 13px;
     }
   }
 `
