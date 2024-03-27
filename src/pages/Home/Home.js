@@ -1,12 +1,11 @@
-import styled, { createGlobalStyle } from "styled-components";
 import { FaWhatsapp } from 'react-icons/fa';
-import Header from "./Header";
-import { AutoComplete } from 'primereact/autocomplete';
-import Timeline from "./Timeline";
+import styled from "styled-components";
 import Footer from "../../components/Footer";
+import Header from "./Header";
+import Timeline from "./Timeline";
 
 export default function Home() {
-  const whatsappNumber = "+553538216262";
+  const whatsappNumber = "+553599716386";
   const whatsappMessage = `Olá, eu gostaria de fazer uma cotação com o comercial da Rodrimar.`;
 
   return (
