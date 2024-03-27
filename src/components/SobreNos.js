@@ -1,9 +1,7 @@
+import React from 'react';
+import { BsTruck } from "react-icons/bs";
 import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
-import YouTube from 'react-youtube';
-import scroll from "../hooks/Scroll";
 import Carousel from "./NHistoriaCarrossel/CarrosselH";
-import {BsTruck} from "react-icons/bs"
 export default function SobreNos(){
 
   const BsTruckIcon = styled(BsTruck)`
@@ -95,7 +93,7 @@ h1 {
       font-size:1.8vh;
       height:10vh;
       width:80vw;
-      margin: 3vh 3vh 6.5vh 3vh;
+      margin: 4vh 3vh 50px 3vh;
     }
   }
 `

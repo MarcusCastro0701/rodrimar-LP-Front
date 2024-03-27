@@ -1,12 +1,12 @@
+import React from 'react';
 import styled from "styled-components";
-import React, { useEffect, useState } from 'react';
-import SobreNos from "../../components/SobreNos";
-import Inicio from "../../components/Inicio";
-import PartnersCarousel from "../../components/partners/PartnersCarousel";
-import Valores from "../../components/Valores"
-import NossaHistoria from "../../components/NossaHistoria";
 import Contato from "../../components/Contato";
+import Inicio from "../../components/Inicio";
 import News from "../../components/News";
+import NossaHistoria from "../../components/NossaHistoria";
+import SobreNos from "../../components/SobreNos";
+import Valores from "../../components/Valores";
+import PartnersCarousel from "../../components/partners/PartnersCarousel";
 
 
 export default function Timeline() {
@@ -32,4 +32,7 @@ const MainContainer = styled.div`
   justify-content: center;
   padding-top: 45px;
   z-index: 0;
+  @media (max-width: 1200px) {
+  padding-top: 0px !important;
+}
 `;
