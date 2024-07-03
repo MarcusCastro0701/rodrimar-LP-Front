@@ -18,8 +18,8 @@ export default function Timeline() {
       <Valores/>
       <NossaHistoria/>
       <Contato/>
-      <News/>
       <PartnersCarousel/>
+      <News/>
     </MainContainer>
   );
 }

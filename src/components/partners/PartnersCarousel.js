@@ -1,26 +1,87 @@
 import styled from "styled-components";
-import PartnerCard from "./PartnerCard";
-import { useState } from "react";
-import PARTNER_LIST from "./partnerList"
+import { MdAgriculture } from "react-icons/md";
+import { MdRecycling } from "react-icons/md";
+import { MdOutlineBlinds } from "react-icons/md";
+import { GiFactory } from "react-icons/gi";
+import { GiFallingRocks } from "react-icons/gi"; 
 
 export default function PartnersCarousel(){
 
-    const [ animationState, setAnimationState ] = useState(true)
+    const width = window.innerWidth;
+    
+    if(width > 1200){
 
-    function FormatPartnersList(list){
-        return [...list, ...list]
+        return (
+            <Container>
+                <h1>{"NOSSOS SEGMENTOS"}</h1>
+                <RowContainer>
+                    <div>
+                        <Agro/>
+                        <p>AGRONEGÓCIO</p>
+                    </div>
+                    
+                    <div>
+                        <Recycle/>
+                        <p>RESÍDUOS</p>
+                    </div>
+                    
+                    <div>
+                        <Rocks/>
+                        <p>MINÉRIOS</p>
+                    </div>
+                    
+                    <div>
+                        <Ceramics/>
+                        <p>CERÂMICA</p>
+                    </div>
+                    
+                    <div>
+                        <Metal/>
+                        <p>METALURGIA</p>
+                    </div>
+                </RowContainer>
+            </Container>
+        )
+
+    }else{
+        return (
+            <Container>
+                <h1>{"NOSSOS SEGMENTOS"}</h1>
+                <RowContainer>
+                    <div>
+                        <Agro/>
+                        <p>AGRONEGÓCIO</p>
+                    </div>
+                    
+                    <div>
+                        <Recycle/>
+                        <p>RESÍDUOS</p>
+                    </div>
+                    
+                    
+                    <div>
+                        <Metal/>
+                        <p>METALURGIA</p>
+                    </div>
+                </RowContainer>
+
+                <RowContainer>
+                    
+                    <div>
+                        <Rocks/>
+                        <p>MINÉRIOS</p>
+                    </div>
+                    
+                    <div>
+                        <Ceramics/>
+                        <p>CERÂMICA</p>
+                    </div>
+                    
+                </RowContainer>
+            </Container>
+        )
     }
-    const result = FormatPartnersList(PARTNER_LIST)
-    return (
-        <Container>
-            <h1>{"CONHEÇA NOSSOS PARCEIROS"}</h1>
-            <CarouselContainer onMouseEnter={() => setAnimationState(false)} onMouseLeave={() => setAnimationState(true)}>
-                {result?.map( (e, i) => 
-                    <PartnerCard key={i} partnerData={e} animationState={animationState} />
-                )}
-            </CarouselContainer>
-        </Container>
-    )
+    
 }
 
 const Container = styled.div`
@@ -52,20 +113,79 @@ const Container = styled.div`
         }
     }  
 `
-const CarouselContainer = styled.div`
-    width: 100%;
+const RowContainer = styled.div`
+    width: 80%;
     height: 190px;
     display: flex;
     align-items: center;
-    justify-content: left;
-    column-gap: 3vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    :hover {
-        animation-play-state: paused;
+    justify-content: space-around;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    p{
+        font-size: 21px;
+        color: #041c44;
+        margin-top: 15px;
     }
     @media (max-width: 850px) {
         height: 90px;
         column-gap: 6vw;
+        p{
+            font-size: 13px;
+        }
     }
 `
+
+const Agro = styled(MdAgriculture)`
+width: 150px;
+height: 150px;
+color: #041c44;
+@media (max-width: 1200px) {
+    width: 70px;
+    height: 70px;
+    }
+`
+
+const Recycle = styled(MdRecycling)`
+width: 150px;
+height: 150px;
+color: #041c44;
+@media (max-width: 1200px) {
+    width: 70px;
+    height: 70px;
+    }
+`
+
+const Rocks = styled(GiFallingRocks)`
+width: 150px;
+height: 150px;
+color: #041c44;
+@media (max-width: 1200px) {
+    width: 70px;
+    height: 70px;
+    }
+`
+
+const Ceramics = styled(MdOutlineBlinds)`
+width: 150px;
+height: 150px;
+color: #041c44;
+@media (max-width: 1200px) {
+    width: 70px;
+    height: 70px;
+    }
+`
+
+const Metal = styled(GiFactory)`
+width: 150px;
+height: 150px;
+color: #041c44;
+@media (max-width: 1200px) {
+    width: 70px;
+    height: 70px;
+    }
+` 
+
