@@ -2,9 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import styled from "styled-components";
 import frota2 from "../assets/images/frota-2.jpg";
-import iso from "../assets/images/iso.jpg";
-import newLogo from "../assets/images/newLogo.jpg";
-import treinamentoISO from "../assets/images/treinamentoISO.jpg";
+import iso from "../assets/images/iso.png";
+import newLogo from "../assets/images/novaLogo.png";
+import treinamentoISO from "../assets/images/treinamentoISO.png";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/free-mode';
+import { Autoplay, Navigation, Pagination, FreeMode } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 export default function News(){
@@ -14,12 +22,6 @@ export default function News(){
       titulo: 'Implantação da ISO 9001', 
       texto: 'A Transporte Rodrimar eleva seus padrões de qualidade e inicia a implantação da ISO 9001 para excelência operacional. A empresa reforça seu compromisso com a qualidade e dá um passo estratégico em suas operações, solidificando seu comprometimento em oferecer serviços de transporte que atendam aos mais altos padrões de qualidade.', 
       imagem: iso 
-    },
-
-    { 
-      titulo: 'Expansão da frota', 
-      texto: 'A Transporte Rodrimar alcança novos níveis de excelência com a chegada do poderoso Scania Super 460 R à sua Frota. Esta aquisição não apenas fortalece o compromisso da empresa com a inovação, mas também promete elevar os padrões de desempenho logístico a novos patamares. Este é um passo significativo para garantir que os clientes da transportadora continuem desfrutando de serviços de alta qualidade, pontualidade e eficiência.', 
-      imagem: frota2
     },
 
     { 
@@ -36,31 +38,6 @@ export default function News(){
     
   ];
 
-  const [noticiaAtual, setNoticiaAtual] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
- 
-      setNoticiaAtual((prevNoticia) =>
-        prevNoticia === noticias.length - 1 ? 0 : prevNoticia + 1
-      );
-    }, 20000);
-
-    return () => clearInterval(intervalId);
-
-  }, []);
-
-  function avancarNoticia(){
-    setNoticiaAtual((prevNoticia) =>
-      prevNoticia === noticias.length - 1 ? 0 : prevNoticia + 1
-    );
-  };
-
-  function retrocedeNoticia(){
-    setNoticiaAtual((prevNoticia) =>
-      prevNoticia === 0 ? noticias.length - 1 : prevNoticia - 1
-    );
-  };
 
     return(
       
@@ -70,29 +47,43 @@ export default function News(){
 
           <SubContainer id="1">
 
-              <Left>
+          <StyledSwiperContainer
+            freeMode={true}
+            slidesPerView={1}
+            navigation={true}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: true,
+            }}
+            spaceBetween={'5'}
+            modules={[Pagination, Navigation, Autoplay, FreeMode]}
+          >
 
-                <h2>{noticias[noticiaAtual].titulo}</h2>
+            
 
-                <p>{noticias[noticiaAtual].texto}</p>
+            {noticias.map((n) => (
+              <StyledSwiperSlide>
 
-              </Left>
+              <h3>{n.titulo}</h3>
 
-              <Right>
+              <img alt='slide-img' src={n.imagem}/>
 
-                <img src={noticias[noticiaAtual].imagem}/>
+              <p>
+                {n.texto}
+              </p>
 
-              </Right>
+            </StyledSwiperSlide>
+            ))}
+
+          </StyledSwiperContainer>
 
           </SubContainer >
 
-          <ArrowContainer>
-            <LeftArrow onClick={retrocedeNoticia}/>
-            <RightArrow onClick={avancarNoticia}/>
-          </ArrowContainer>
 
         </MainContainer>
-
 
 
     )
@@ -101,7 +92,7 @@ export default function News(){
 
 const MainContainer = styled.div`
 width: 100%;
-height: 90vh;
+height: auto !important;
 background: linear-gradient(to right,rgba(4, 28, 68, 1),rgba(4, 28, 68, 0.6)), url("https://img.freepik.com/fotos-gratis/veiculo-de-caminhao-longo-pronto-para-entrega-e-transporte_342744-1294.jpg?w=1380&t=st=1693518357~exp=1693518957~hmac=52dfcf984acf66992463f98a8b5085988eb64367a3b6567f02c5127d43f57ef9") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 display: flex;
@@ -111,15 +102,32 @@ align-items: center;
 padding: 7vh 0 5vh 0;
 h1{
   color: white;
-  font-size: 6vh;
+  font-size: 55px;
   font-weight: 500;
+}
+h3{
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+}
+p{
+  text-align: center;
+  font-size: 20px !important;
+  max-width: 80%;
 }
 @media (max-width: 1200px) {
   margin: 0;
+  h1{
+    font-size: 4vh;
   }
-`
-const ArrowContainer = styled.div`
-margin-top: 4vh;
+  h3{
+    font-size: 25px;
+  }
+  p{
+    font-size: 12px !important;
+    max-width: 85%;
+  }
+  }
 `
 
 const SubContainer = styled.div `
@@ -161,57 +169,69 @@ h2 {
     }
   }
 `
-const Left = styled.div`
-width:40vw;
-@media (max-width:1200px) {
-width: 90vw;
-margin-bottom: 15vh;
-}
-`
-const Right = styled.div`
-width:40vw;
-display:flex;
-align-items:center;
-justify-content: center;
-margin-left: 3vh;
-img{
-    max-height: 60vh;
-    min-width: 48vh;
-    border-radius: 15px;
+
+const StyledSwiperSlide = styled(SwiperSlide)`
+  background-color: none !important;
+  padding-top: 2vh !important;
+  background-image: ${(props) => `url(${props.background})`};
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2%;
+  transition: transform 0.8s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img{
+      width: 614.4px !important;
+      height: 345.6px;
+      border-radius: 4%;
+      margin: 30px 0;
   }
   @media (max-width: 1200px) {
-    backdrop-filter: none;
-    margin-left: 0;
     img{
-    max-height: 22vh;
-    min-width: 15vh;
-    max-width: 28vh;
-    border-radius: 15px;
-  }
-  }
-
-
-`
-const LeftArrow = styled(IoIosArrowDropleft)`
-  font-size: 3.5vh;
-  color: white;
-  transition: transform 0.2s; 
-  
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+      width: 230.4px !important;
+      height: 129.6px;
+    }
   }
 `;
-const RightArrow = styled(IoIosArrowDropright)`
-  font-size: 3.5vh;
-  color: white;
-  transition: transform 0.2s; 
-  margin-left: 2.9vh;
-  
-  
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+
+const StyledSwiperContainer = styled(Swiper)`
+  max-width: 1152px !important;
+  background-color: none !important;
+  height: auto;
+  margin-top: 1.5vh;
+  padding-bottom: 60px;
+  @media (max-width: 1500px) {
+    padding-bottom: 100px;
+    max-width: 90% !important;
+  }
+  .swiper-pagination-bullet {
+    background: white;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 25%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    @media (max-width: 1500px) {
+      width: 2.5vh;
+      height: 2.5vh;
+    }
+    &:hover {
+      cursor: pointer;
+      scale: 1.05;
+      border-radius: 40%;
+    }
   }
 `;
 

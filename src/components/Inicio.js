@@ -72,8 +72,9 @@ const SubContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 22px 100px 22px 100px;
+    padding: 22px 100px 22px 85px;
     border-radius: 15px;
+    width: 80%;
     p{
         font-size: 17px;
         color: black;
@@ -94,7 +95,7 @@ const SubContainer = styled.div`
 }
     }
     h2{
-        margin: 0px 0 15px 0;
+        margin: 0px 0 30px 0;
         font-size: 20px;
         color: black;
         width: 700px;
@@ -102,7 +103,7 @@ const SubContainer = styled.div`
         line-height: 20px;
         @media (max-width: 1200px) {
             font-size: 20px;
-            width: 100%;
+            width: 90vw;
             b{
                 font-size: 20px;
             }
@@ -125,18 +126,18 @@ const SubContainer = styled.div`
     font-weight: 800;
     font-size: 21px;
     color: #041c44;
-}
-img{
+    }
+    img{
     border-radius: 18px;
     @media (max-width: 1200px) {
         width: 350px;
         height: 130px;
+        margin-bottom: 25px;
 }
-}
+    }
 @media (max-width: 1200px) {
     width: 100%;
-    height: 70%;
-
+    height: 50%;
 }
 `
 

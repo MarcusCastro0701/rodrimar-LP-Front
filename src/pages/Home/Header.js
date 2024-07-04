@@ -42,19 +42,19 @@ export default function Header() {
         </div>
         <div
           className={selectedItem === 'historia' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'historia', position: 2500})}
+          onClick={() => handleItemClick({item: 'historia', position: 3300})}
         >
           Nossa história
         </div>
         <div
           className={selectedItem === 'Contato' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'Contato', position: 3240})}
+          onClick={() => handleItemClick({item: 'Contato', position: 3980})}
         >
           Contato
         </div>
         <div
           className={selectedItem === 'Notícias' ? 'selected' : ''}
-          onClick={() => handleItemClick({item: 'Notícias', position: 4100})}
+          onClick={() => handleItemClick({item: 'Notícias', position: 5500})}
         >
           Notícias
         </div>

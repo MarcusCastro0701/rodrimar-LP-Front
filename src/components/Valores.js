@@ -253,7 +253,7 @@ const SubContainerValues = styled.div`
         align-items: center;
         max-width: 75%;
         @media (max-width: 1200px) {
-            font-size: 17px;
+            font-size: 1.8vh;
             max-width: 85%;
 } 
     }

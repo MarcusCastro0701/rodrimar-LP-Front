@@ -43,10 +43,11 @@ export default function NossaHistoria(){
 
 
 const Container = styled.div `
+padding-bottom: 20px;
 display: flex;
 justify-content:center;
 width: 100%;
-height: 80vh;
+height: auto;
 background: linear-gradient(to right,rgba(4, 28, 68, 1),rgba(4, 28, 68, 0.6)), url("https://img.freepik.com/fotos-gratis/veiculo-de-caminhao-longo-pronto-para-entrega-e-transporte_342744-1294.jpg?w=1380&t=st=1693518357~exp=1693518957~hmac=52dfcf984acf66992463f98a8b5085988eb64367a3b6567f02c5127d43f57ef9") no-repeat center center / cover; 
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 h1 {
@@ -62,25 +63,27 @@ h1 {
     }
     p {
     color: white;
-    margin: 4.2vh 3vw;
-    font-size:2vh;
+    margin: 4vh 3vw;
+    font-size:20px;
     line-height: 1.5;
     width:30vw;
+    height: auto !important;
   }
   @media (max-width: 1200px) {
   display:flex;
   flex-direction: column;
   width: 100%;
+  height: 880px !important;
   h1{
     margin-top: 5vh;
     font-size:6.3vw;
     width:80vw;
   }
-    p{
-      font-size:1.6vh;
-      height:10vh;
+  p{
+      font-size:15px;
+      height: auto !important;
       width:80vw;
-      margin: 3vh 0 40px 13px;
+      margin: 4vh 3vh 10px 3vh;
     }
   }
 `
@@ -105,7 +108,7 @@ img{
 @media (max-width:1200px) {
   display: flex;
   flex-direction: column;
-  margin:2vh 4vw;
+  margin:0vh 4vw;
   line-height: 30px;
 }
 `
@@ -117,8 +120,8 @@ align-items:center;
 flex-direction: column;
 backdrop-filter: blur(5px);
 img{
-  width: 33.7vw;
-  height: 7vw;
+  width: 200px;
+  height: 60px;
   margin-bottom: 3vh;
 }
 iframe{
@@ -127,13 +130,11 @@ iframe{
     height: 36vh;
     width: 31.7vw;
     @media (max-width: 1200px) {
-    width: 77vw;
-    height: 20vh;
-    margin-top: -3vh;
+    width: 300px;
+    height: 180px;
+    margin-top: 0px;
   }}
   @media (max-width: 1200px) {
-    width:40vw;
-    height:40vw;
     backdrop-filter: none;
     margin:auto;
     

@@ -18,20 +18,6 @@ export default function SobreNos(){
   }
 `;
 
-     const opts = {
-        width:'800',
-        height:'454',
-         playerVars: {
-           controls: 0,
-           fs: 0,
-           iv_load_policy: 3,
-           modestbranding: 1,
-           showinfo: 0,
-           loop: 0,
-           rel: 0,
-         },
-       };
-
     return(
 
         <Container id="1">
@@ -62,9 +48,11 @@ const Container = styled.div `
 display: flex;
 justify-content:center;
 width: 100%;
-height: 80vh;
+height: auto;
+max-height: 800px !important;
 background: linear-gradient(to right,rgba(4, 28, 68, 1),rgba(4, 28, 68, 0.6)), url("https://img.freepik.com/fotos-gratis/veiculo-de-caminhao-longo-pronto-para-entrega-e-transporte_342744-1294.jpg?w=1380&t=st=1693518357~exp=1693518957~hmac=52dfcf984acf66992463f98a8b5085988eb64367a3b6567f02c5127d43f57ef9") no-repeat center center / cover;
 box-shadow: rgba(0,0,0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+padding-bottom: 50px;
 h1 {
         padding-left: 1vw;
         border-left: 8px solid #09DCFF;
@@ -79,21 +67,23 @@ h1 {
     p {
     color: white;
     margin: 4vh 3vw;
-    font-size:2vh;
+    font-size:20px;
     line-height: 1.5;
     width:30vw;
+    height: auto !important;
   }
 @media (max-width: 1200px) {
   flex-direction: column;
   width: 100%;
+  height: 750px !important;
   h1{
     margin-top: 5vh;
   }
     p{
-      font-size:1.8vh;
-      height:10vh;
+      font-size:15px;
+      height: auto !important;
       width:80vw;
-      margin: 4vh 3vh 50px 3vh;
+      margin: 4vh 3vh 10px 3vh;
     }
   }
 `
@@ -101,6 +91,7 @@ h1 {
 const Left = styled.div`
 width:40vw;
 backdrop-filter: blur(5px);
+height: auto !important;
 @media (max-width:1200px) {
   margin:2vh 4vw;
 }
@@ -110,7 +101,7 @@ backdrop-filter: blur(5px);
 display:flex;
 justify-content:center;
 align-items:center;
-
+height: auto !important;
 
   @media (max-width: 1200px) {
     width:40vw;
