@@ -35,8 +35,9 @@ export default function Footer(){
           <h5 onClick={() => handleItemClick({position: 0})}>{"Página Inicial"}</h5>
           <h5 onClick={() => handleItemClick({position: 800})}>{"Sobre nós"}</h5>
           <h5 onClick={() => handleItemClick({position: 1650})}>{"Valores"}</h5>
-          <h5 onClick={() => handleItemClick({position: 2500})}>{"História"}</h5>
-          <h5 onClick={() => handleItemClick({position: 3240})}>{"Contato"}</h5>
+          <h5 onClick={() => handleItemClick({position: 3200})}>{"História"}</h5>
+          <h5 onClick={() => handleItemClick({position: 3780})}>{"Segmentos"}</h5>
+          <h5 onClick={() => handleItemClick({position: 4300})}>{"Contato"}</h5>
         </TextColumn>
 
         <TextColumn>

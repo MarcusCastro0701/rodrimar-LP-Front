@@ -17,9 +17,8 @@ export default function Timeline() {
       <SobreNos/>
       <Valores/>
       <NossaHistoria/>
-      <Contato/>
       <PartnersCarousel/>
-      <News/>
+      <Contato/>
     </MainContainer>
   );
 }

@@ -13,7 +13,7 @@ export default function PartnersCarousel(){
 
         return (
             <Container>
-                <h1>{"NOSSOS SEGMENTOS"}</h1>
+                <h1>{"Nossos segmentos"}</h1>
                 <RowContainer>
                     <div>
                         <Agro/>
