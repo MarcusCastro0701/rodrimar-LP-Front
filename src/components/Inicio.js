@@ -62,7 +62,9 @@ const Container = styled.div `
     height: 930px;
     transition: background-image 2s ease-in-out;
     @media (max-width: 1200px) {
-    margin-top: -90px;
+    margin-top: 0px !important;
+    height: auto;
+    padding: 6vh 0;
 }
     
 `
@@ -131,7 +133,7 @@ const SubContainer = styled.div`
     border-radius: 18px;
     @media (max-width: 1200px) {
         width: 350px;
-        height: 130px;
+        height: 110px;
         margin-bottom: 25px;
 }
     }

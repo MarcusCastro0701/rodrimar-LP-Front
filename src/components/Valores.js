@@ -130,7 +130,7 @@ const Container = styled.div `
     background-size: cover; 
     background-position: center; 
     position: relative;
-    padding: 4vh 0;
+    padding: 4vh 0 4vh 0;
     z-index: 1 !important;
     span{
         display: flex;
@@ -217,18 +217,15 @@ const SubContainer = styled.div`
     }
 `
 const SubContainerValues = styled.div`
-    div > :nth-child(3) {
-    margin-top: 80px !important;
-    }
     z-index: 10 !important;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: rgba(210, 210, 210, 0.7);
     border-radius: 10px;
-    height: auto;
+    height: 700px;
     width: auto;
-    margin: 0vh 5vh 5vh 5vh;
+    margin: 0vh 5vh 0vh 5vh;
     max-width: 60vh;
     padding-bottom: 40px;
     text-align: center;
@@ -243,7 +240,8 @@ const SubContainerValues = styled.div`
     width: 90%;
     height: auto; 
     padding: 5px 20px 20px 20px;
-    margin-top: 5vh !important
+    margin-top: 5vh !important;
+    margin-bottom: 5vh !important
     }
     div{
         display: flex;
@@ -253,7 +251,7 @@ const SubContainerValues = styled.div`
         width: 100%;
         height: 150px;
         border-radius:10px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         cursor: pointer;
         @media (max-width: 1200px) {
         height: 80px; 
@@ -270,7 +268,7 @@ const SubContainerValues = styled.div`
 }
     }
     h2{
-        font-size: 30px;
+        font-size: 22px;
         color: black;
         font-weight: 500;
         display: flex;
@@ -279,26 +277,24 @@ const SubContainerValues = styled.div`
         margin-top: 0px;
         @media (max-width: 1200px) {
             font-size: 23px;
+            margin-top: 15px;
 }
     }
     p{
-        font-size: 20px;
+        font-size: 15px;
         color: black;
         font-weight: 500;
         display: flex;
         align-items: center;
-        max-width: 100%;
-        margin-bottom: 20px;
+        max-width: 90%;
+        margin-bottom: 15px;
         @media (max-width: 1200px) {
-            font-size: 1.8vh;
+            font-size: 15px;
             max-width: 85%;
 } 
     }
 `
 const SubContainerPolicy = styled.div`
-    div > :nth-child(3) {
-    margin-top: 80px !important;
-    }
     z-index: 10 !important;
     display: flex;
     align-items: center;
@@ -306,24 +302,19 @@ const SubContainerPolicy = styled.div`
     background-color: rgba(210, 210, 210, 0.7);
     border-radius: 10px;
     height: auto;
-    width: 90% !important;
-    margin: 0vh 5vh 5vh 5vh;
-    max-width: 60vh;
-    padding-bottom: 40px;
+    width: 95% !important;
+    margin: 5vh 5vh 0vh 5vh;
+    padding-bottom: 0px;
     padding: 22px 40px 40px 40px;
     text-align: center;
     position: relative;
-    cursor: pointer;
-    border: 4px solid rgba(4, 28, 68, 0.95);
-    &:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.03);
-  }
+    //border: 4px solid rgba(4, 28, 68, 0.95);
   @media (max-width: 1200px) {
     width: 90%;
     height: auto; 
     padding: 23px 20px 20px 20px;
-    margin-top: 5vh !important
+    margin-top: 5vh !important;
+    border: 4px solid rgba(4, 28, 68, 0.95);
     }
     div{
         display: flex;
@@ -355,14 +346,14 @@ const SubContainerPolicy = styled.div`
         font-weight: 500;
         display: flex;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         margin-top: 0px;
         @media (max-width: 1200px) {
             font-size: 23px;
 }
     }
     p{
-        font-size: 20px;
+        font-size: 22px;
         color: black;
         font-weight: 500;
         display: flex;
@@ -370,8 +361,8 @@ const SubContainerPolicy = styled.div`
         max-width: 100%;
         margin-bottom: 20px;
         @media (max-width: 1200px) {
-            font-size: 1.8vh;
-            max-width: 85%;
+            font-size: 15px;
+            max-width: 95%;
 } 
     }
 `
